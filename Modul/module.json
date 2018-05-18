@@ -1,0 +1,14 @@
+{
+    "id": "{87F46796-CC43-442D-94FD-9990BD8D9F54}",
+    "name": "MoehlenhoffAlpha2",
+    "type": 3,
+    "vendor": "Möhlenhoff",
+    "aliases": 
+    [
+        "Möhlenhoff Alpha 2"
+    ],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "MA2"
+}
