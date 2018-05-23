@@ -13,7 +13,7 @@
 	  { "type": "CheckBox", "name": "ShowProgramm", "caption": "Program"},
 	  { "type": "CheckBox", "name": "ShowPumpOutput", "caption": "Pump Output"},
 	  { "type": "CheckBox", "name": "ShowRelais", "caption": "Pump Relais"},
-	  { "type": "CheckBox", "name": "ShowChangeOver_Func", "caption": "Change over Function"},
+	  { "type": "CheckBox", "name": "ShowChangeOverFunc", "caption": "Change over Function"},
 	  { "type": "CheckBox", "name": "ShowEmergencyMode", "caption": "Emergency Mode"},
 	  { "type": "CheckBox", "name": "ShowValveProtect", "caption": "ValveProtect"},
 	  { "type": "CheckBox", "name": "ShowPumpProtect", "caption": "Pump Protect"},

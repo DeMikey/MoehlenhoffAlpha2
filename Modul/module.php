@@ -4,9 +4,14 @@ class MoehlenhoffAlpha2 extends IPSModule
 
 	private static $base = Array(
 		"ID" => Array("Name" => "Basis ID", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 50),
-		//type
-        //Name
-        //Origin
+        "TYPE" => Array("Name" => "Basis Type", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 50),
+        "NAME" => Array("Name" => "Basis Name", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 50),
+        "ORIGIN" => Array("Name" => "Basis Origin", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 50),
+        "ERRORCOUNT" => Array("Name" => "Basis Error Count", "Type" => 1, "Profile" => "", "Action" => false, "Position" => 50),
+        "DATETIME" => Array("Name" => "Basis Date Time", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 50),
+        "DAYOFWEEK" => Array("Name" => "Basis Day of Week", "Type" => 1, "Profile" => "", "Action" => false, "Position" => 50),
+        "TIMEZONE" => Array("Name" => "Basis Timezone", "Type" => 1, "Profile" => "", "Action" => false, "Position" => 50),
+        "NTPTIMESYNC" => Array("Name" => "Basis NTP Synchroinze", "Type" => 0, "Profile" => "", "Action" => false, "Position" => 50),
         //ErrorCode
 		"VERS_SW_STM" => Array("Name" => "Basis SW STM Version", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 50),
 		"VERS_SW_ETH" => Array("Name" => "Basis SW ETH Version", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 50),
@@ -15,17 +20,21 @@ class MoehlenhoffAlpha2 extends IPSModule
 		"SUMMERWINTER" => Array("Name" => "Basis Automatische Zeitumstellung", "Type" => 0, "Profile" => "MH.SummerWinter", "Action" => true, "Position" => 50),
 		"TPS" => Array("Name" => "Basis Taupunktsensor", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 50),
 		"LIMITER" => Array("Name" => "Basis Temperaturbegrenzer", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 50),
+        "MASTERID" => Array("Name" => "Basis Master ID", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 50),
 		"CHANGEOVER" => Array("Name" => "Basis Betriebsart Heizen/Kühlen (CO-Eingang)", "Type" => 0, "Profile" => "MH.ChangeOver", "Action" => false, "Position" => 50),
+        "COOLING" => Array("Name" => "Basis Kühlen-Modus", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 50),
 		"MODE" => Array("Name" => "Basis Rang im Systemverbund", "Type" => 1, "Profile" => "MH.Mode", "Action" => false, "Position" => 50),
-		"SMARTSTART" => Array("Name" => "Basis Smartstart ein/aus", "Type" => 0, "Profile" => "~Switch", "Action" => true, "Position" => 50),
-		"COOLING" => Array("Name" => "Basis Kühlen-Modus", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 50),
-		"ANTIFREEZE" => Array("Name" => "Basis Frostschutz", "Type" => 0, "Profile" => "~Switch", "Action" => true, "Position" => 50),
-		"ANTIFREEZE_TEMP" => Array("Name" => "Basis Frostschutz Temperatur", "Type" => 1, "Profile" => "MH.AntifreezeTemp", "Action" => true, "Position" => 50),
+        "OPERATIONMODE_ACTOR" => Array("Name" => "Basis OPERATIONMODE_ACTOR", "Type" => 1, "Profile" => "MH.Mode", "Action" => false, "Position" => 50),
+        "ANTIFREEZE" => Array("Name" => "Basis Frostschutz", "Type" => 0, "Profile" => "~Switch", "Action" => true, "Position" => 50),
+        "ANTIFREEZE_TEMP" => Array("Name" => "Basis Frostschutz Temperatur", "Type" => 1, "Profile" => "MH.AntifreezeTemp", "Action" => true, "Position" => 50),
+		"FIRSTOPEN_TIME" => Array("Name" => "Basis FIRSTOPEN_TIME", "Type" => 1, "Profile" => "~Switch", "Action" => true, "Position" => 50),
+        "SMARTSTART" => Array("Name" => "Basis Smartstart ein/aus", "Type" => 0, "Profile" => "~Switch", "Action" => true, "Position" => 50),
 		"ECO_DIFF" => Array("Name" => "Basis Absenkdifferenztemperatur", "Type" => 2, "Profile" => "MH.EcoDiff", "Action" => true, "Position" => 50),
+        "ECO_INPUTMODE" => Array("Name" => "Basis Absenkeingang", "Type" => 0, "Profile" => "", "Action" => false, "Position" => 50),
+        "ECO_INPUT_STATE" => Array("Name" => "Basis Absenkeingang", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 50),
 		"T_HEAT_VACATION" => Array("Name" => "Basis Urlaub Temperatur Heizen", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 50),
 
         "VACATION/VACATION_STATE" => Array("Name" => "Basis Urlaub Status", "Type" => 1, "Profile" => "MH.VacationState", "Action" => true, "Position" => 50),
-		"ECO_INPUT_STATE" => Array("Name" => "Basis Absenkeingang", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 50),
 		//"PUMP_OUTPUT/PUMP_LEADTIME" => Array("Name" => "Pumpen Vorlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50),
 		//"PUMP_OUTPUT/PUMP_STOPPINGTIME" => Array("Name" => "Pumpen Nachlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50),
 		//"RELAIS/RELAIS_LEADTIME" => Array("Name" => "Relais Vorlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.RelaisTime", "Action" => true, "Position" => 50),
@@ -434,8 +443,21 @@ class MoehlenhoffAlpha2 extends IPSModule
 		//You cannot use variables here. Just static values.
 		$this->RegisterPropertyString("IPAddress", "172.17.31.161");
 		$this->RegisterPropertyInteger("Interval", 0);
+        // Base Settings
+        $this->RegisterPropertyBoolean("ShowVacation", false);
+        $this->RegisterPropertyBoolean("ShowNetwork", false);
+        $this->RegisterPropertyBoolean("ShowCloud", false);
+        $this->RegisterPropertyBoolean("ShowKWLCTRL", false);
+        $this->RegisterPropertyBoolean("ShowCode", false);
+        $this->RegisterPropertyBoolean("ShowProgramm", false);
+        $this->RegisterPropertyBoolean("ShowPumpOutput", false);
+        $this->RegisterPropertyBoolean("ShowRelais", false);
+        $this->RegisterPropertyBoolean("ShowChangeOverFunc", false);
+        $this->RegisterPropertyBoolean("ShowEmergencyMode", false);
+        $this->RegisterPropertyBoolean("ShowValveProtect", false);
+        $this->RegisterPropertyBoolean("ShowPumpProtect", false);
 
-		$this->RegisterPropertyBoolean("ShowHeatArea01", true);
+        $this->RegisterPropertyBoolean("ShowHeatArea01", true);
 		$this->RegisterPropertyBoolean("ShowHeatArea02", false);
 		$this->RegisterPropertyBoolean("ShowHeatArea03", false);
 		$this->RegisterPropertyBoolean("ShowHeatArea04", false);
