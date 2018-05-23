@@ -445,216 +445,179 @@ class MoehlenhoffAlpha2 extends IPSModule
 
 		//Variablenprofile
 		//ANTIFREEZE_TEMP
-		if(!IPS_VariableProfileExists("MH.AntifreezeTemp")){
-			IPS_CreateVariableProfile("MH.AntifreezeTemp", 1);
-			IPS_SetVariableProfileIcon("MH.AntifreezeTemp", "Temperature");
-			IPS_SetVariableProfileValues("MH.AntifreezeTemp", 5, 10, 1);
-			IPS_SetVariableProfileText("MH.AntifreezeTemp", "", "°C");
-		}
+        $this->RegisterProfile(
+            'MH.AntifreezeTemp','Temperature','','°C',
+            5,10, 1, 0,1);
 		// TEMPERATUREUNIT
-		if(!IPS_VariableProfileExists("MH.TemperatureUnit")){
-			IPS_CreateVariableProfile("MH.TemperatureUnit", 1);
-			IPS_SetVariableProfileIcon("MH.TemperatureUnit", "Temperature");
-			IPS_SetVariableProfileValues("MH.TemperatureUnit", 0, 1, 1);
-			IPS_SetVariableProfileAssociation("MH.TemperatureUnit", 0, "Celsius", "", -1);
-			IPS_SetVariableProfileAssociation("MH.TemperatureUnit", 1, "Fahrenheit", "", -1);
-		}
+        $this->RegisterProfileAssociation(
+            'MH.TemperatureUnit','Temperature','','',
+            0,1,1,0,1,
+            [
+                [0, $this->Translate('Celsius'), '', -1],
+                [1, $this->Translate('Fahrenheit'), '', -1],
+            ]
+        );
 		//SUMMERWINTER
-		if(!IPS_VariableProfileExists("MH.SummerWinter")){
-			IPS_CreateVariableProfile("MH.SummerWinter", 0);
-			IPS_SetVariableProfileIcon("MH.SummerWinter", "Temperature");
-			IPS_SetVariableProfileAssociation("MH.SummerWinter", 0, "Aus", "", -1);
-			IPS_SetVariableProfileAssociation("MH.SummerWinter", 1, "Automatisch", "", -1);
-		}
+        $this->RegisterProfileAssociation(
+            'MH.SummerWinter','Temperature','','',
+            0,1,1,0,0,
+            [
+                [0, $this->Translate('On'), '', -1],
+                [1, $this->Translate('Automatic'), '', -1],
+            ]
+        );
 		//CHANGEOVER
-		if(!IPS_VariableProfileExists("MH.ChangeOver")){
-			IPS_CreateVariableProfile("MH.ChangeOver", 0);
-			IPS_SetVariableProfileIcon("MH.ChangeOver", "Temperature");
-			IPS_SetVariableProfileAssociation("MH.ChangeOver", 0, "Heizen", "", -1);
-			IPS_SetVariableProfileAssociation("MH.ChangeOver", 1, "Kühlen", "", -1);
-		}
+        $this->RegisterProfileAssociation(
+            'MH.ChangeOver','Temperature','','',
+            0,1,1,0,0,
+            [
+                [0, $this->Translate('Heizen'), '', -1],
+                [1, $this->Translate('Kühlen'), '', -1],
+            ]
+        );
 		//MODE
-		if(!IPS_VariableProfileExists("MH.Mode")){
-			IPS_CreateVariableProfile("MH.Mode", 1);
-			IPS_SetVariableProfileValues("MH.Mode", 0, 2, 1);
-			IPS_SetVariableProfileIcon("MH.Mode", "IPS");
-			IPS_SetVariableProfileAssociation("MH.Mode", 0, "Standalone", "", -1);
-			IPS_SetVariableProfileAssociation("MH.Mode", 1, "Master", "", -1);
-			IPS_SetVariableProfileAssociation("MH.Mode", 2, "Slave", "", -1);
-		}
+        $this->RegisterProfileAssociation(
+            'MH.Mode','IPS','','',
+            0,2,1,0,1,
+            [
+                [0, $this->Translate('Standalone'), '', -1],
+                [1, $this->Translate('Master'), '', -1],
+                [2, $this->Translate('Slave'), '', -1],
+            ]
+        );
 		//ECO_DIFF
-		if(!IPS_VariableProfileExists("MH.EcoDiff")){
-			IPS_CreateVariableProfile("MH.EcoDiff", 2);
-			IPS_SetVariableProfileIcon("MH.EcoDiff", "Temperature");
-			IPS_SetVariableProfileDigits("MH.EcoDiff", 1);
-			IPS_SetVariableProfileValues("MH.EcoDiff", 2.0, 6.0, 0.1);
-			IPS_SetVariableProfileText("MH.EcoDiff", "", "°C");
-		}
+        $this->RegisterProfile(
+            'MH.EcoDiff','Temperature','','°C',
+            2.0,6.0, 0.1, 1,2);
 		//VACATION_STATE
-		if(!IPS_VariableProfileExists("MH.VacationState")){
-			IPS_CreateVariableProfile("MH.VacationState", 1);
-			IPS_SetVariableProfileValues("MH.VacationState", 0, 2, 1);
-			IPS_SetVariableProfileIcon("MH.VacationState", "Calendar");
-			IPS_SetVariableProfileAssociation("MH.VacationState", 0, "Aus", "", -1);
-			IPS_SetVariableProfileAssociation("MH.VacationState", 1, "Geplant", "", 0x0000FF);
-			IPS_SetVariableProfileAssociation("MH.VacationState", 2, "Aktiv", "", 0x00FF00);
-		}
+        $this->RegisterProfileAssociation(
+            'MH.VacationState','Calendar','','',
+            0,2,1,0,1,
+            [
+                [0, $this->Translate('Off'), '', -1],
+                [1, $this->Translate('Scheduled'), '', -1],
+                [2, $this->Translate('Active'), '', -1],
+            ]
+        );
 		//PUMP_TIME
-		if(!IPS_VariableProfileExists("MH.PumpTime")){
-			IPS_CreateVariableProfile("MH.PumpTime", 1);
-			IPS_SetVariableProfileIcon("MH.PumpTime", "Clock");
-			IPS_SetVariableProfileValues("MH.PumpTime", 0, 5, 1);
-			IPS_SetVariableProfileText("MH.PumpTime", "", "min");
-		}
+        $this->RegisterProfile(
+            'MH.PumpTime','Clock','','min',
+            0,5, 1, 0,1);
 		//RELAIS_TIME
-		if(!IPS_VariableProfileExists("MH.RelaisTime")){
-			IPS_CreateVariableProfile("MH.RelaisTime", 1);
-			IPS_SetVariableProfileIcon("MH.RelaisTime", "Clock");
-			IPS_SetVariableProfileValues("MH.RelaisTime", 0, 60, 1);
-			IPS_SetVariableProfileText("MH.RelaisTime", "", "min");
-		}
+        $this->RegisterProfile(
+            'MH.RelaisTime','Clock','','min',
+            0,60, 1, 0,1);
 		//EMERGENCYMODE_TIME
-		if(!IPS_VariableProfileExists("MH.EmergencyTime")){
-			IPS_CreateVariableProfile("MH.EmergencyTime", 1);
-			IPS_SetVariableProfileIcon("MH.EmergencyTime", "Clock");
-			IPS_SetVariableProfileValues("MH.EmergencyTime", 30, 600, 30);
-			IPS_SetVariableProfileText("MH.EmergencyTime", "", "min");
-		}
+        $this->RegisterProfile(
+            'MH.EmergencyTime','Clock','','min',
+            30,600, 30, 0,1);
 		//PWMCYCLE
-		if(!IPS_VariableProfileExists("MH.PWMCycle")){
-			IPS_CreateVariableProfile("MH.PWMCycle", 1);
-			IPS_SetVariableProfileIcon("MH.PWMCycle", "Clock");
-			IPS_SetVariableProfileValues("MH.PWMCycle", 10, 30, 1);
-			IPS_SetVariableProfileText("MH.PWMCycle", "", "min");
-		}
+        $this->RegisterProfile(
+            'MH.PWMCycle','Clock','','min',
+            10,30, 1, 0,1);
 		//PWMPERCENT
-		if(!IPS_VariableProfileExists("MH.PWMPercent")){
-			IPS_CreateVariableProfile("MH.PWMPercent", 1);
-			IPS_SetVariableProfileIcon("MH.PWMPercent", "Intensity");
-			IPS_SetVariableProfileValues("MH.PWMPercent", 0, 100, 5);
-			IPS_SetVariableProfileText("MH.PWMPercent", "", "%");
-		}
+        $this->RegisterProfile(
+            'MH.PWMPercent','Clock','','%',
+            1,100, 5, 0,1);
 		//HEATAREA_MODE
-		if(!IPS_VariableProfileExists("MH.HeatAreaMode")){
-			IPS_CreateVariableProfile("MH.HeatAreaMode", 1);
-			IPS_SetVariableProfileIcon("MH.HeatAreaMode", "Shutter");
-			IPS_SetVariableProfileValues("MH.HeatAreaMode", 0, 2, 1);
-			IPS_SetVariableProfileAssociation("MH.HeatAreaMode", 0, "Auto", "Ok", 0x0000FF);
-			IPS_SetVariableProfileAssociation("MH.HeatAreaMode", 1, "Tag", "Sun", -1);
-			IPS_SetVariableProfileAssociation("MH.HeatAreaMode", 2, "Nacht", "Moon", -1);
-		}
+        $this->RegisterProfileAssociation(
+            'MH.HeatAreaMode','Shutter','','',
+            0,2,1,0,1,
+            [
+                [0, $this->Translate('Auto'), 'Ok', 0x0000FF],
+                [1, $this->Translate('Day'), 'Sun', -1],
+                [2, $this->Translate('Night'), 'Moon', -1],
+            ]
+        );
 		//HEATAREA_PROGRAM
-		if(!IPS_VariableProfileExists("MH.HeatAreaProgram")){
-			IPS_CreateVariableProfile("MH.HeatAreaProgram", 1);
-			IPS_SetVariableProfileIcon("MH.HeatAreaProgram", "IPS");
-			IPS_SetVariableProfileValues("MH.HeatAreaProgram", 0, 3, 1);
-		}
+        $this->RegisterProfile(
+            'MH.HeatAreaProgram','IPS','','',
+            1,3, 1, 0,1);
 		//HEATAREA_PARTY
-		if(!IPS_VariableProfileExists("MH.HeatAreaParty")){
-			IPS_CreateVariableProfile("MH.HeatAreaParty", 1);
-			IPS_SetVariableProfileIcon("MH.HeatAreaParty", "Melody");
-			IPS_SetVariableProfileValues("MH.HeatAreaParty", 0, 24, 1);
-		}
+        $this->RegisterProfile(
+            'MH.HeatAreaParty','Melody','','',
+            1,24, 1, 0,1);
 		//HEATAREA_PARTY_REMAININGTIME
-		if(!IPS_VariableProfileExists("MH.HeatAreaPartyRemainingTime")){
-			IPS_CreateVariableProfile("MH.HeatAreaPartyRemainingTime", 1);
-			IPS_SetVariableProfileIcon("MH.HeatAreaPartyRemainingTime", "Melody");
-			IPS_SetVariableProfileValues("MH.HeatAreaPartyRemainingTime", 0, 1440, 1);
-		}
+        $this->RegisterProfile(
+            'MH.HeatAreaPartyRemainingTime','Melody','','',
+            1,1440, 1, 0,1);
 		//HEATAREA_STATE
-		if(!IPS_VariableProfileExists("MH.HeatAreaState")){
-			IPS_CreateVariableProfile("MH.HeatAreaState", 0);
-			IPS_SetVariableProfileIcon("MH.HeatAreaState", "Power");
-			IPS_SetVariableProfileAssociation("MH.HeatAreaState", 0, "OK", "", -1);
-			IPS_SetVariableProfileAssociation("MH.HeatAreaState", 1, "Error", "", 0xFF0000);
-		}
+        $this->RegisterProfileAssociation(
+            'MH.HeatAreaState','Power','','',
+            0,0,0,0,0,
+            [
+                [0, $this->Translate('OK'), '', -1],
+                [1, $this->Translate('Error'), '', 0xFF0000]
+            ]
+        );
 		//HEATAREA_RPM_MOTOR
-		if(!IPS_VariableProfileExists("MH.HeatAreaRPMMotor")){
-			IPS_CreateVariableProfile("MH.HeatAreaRPMMotor", 1);
-			IPS_SetVariableProfileIcon("MH.HeatAreaRPMMotor", "TurnRight");
-			IPS_SetVariableProfileValues("MH.HeatAreaRPMMotor", 0, 100, 25);
-			IPS_SetVariableProfileText("MH.HeatAreaRPMMotor", "", "%");
-			IPS_SetVariableProfileAssociation("MH.HeatAreaRPMMotor", 0, "Aus", "", -1);
-			IPS_SetVariableProfileAssociation("MH.HeatAreaRPMMotor", 25, "25%", "", -1);
-			IPS_SetVariableProfileAssociation("MH.HeatAreaRPMMotor", 50, "50%", "", -1);
-			IPS_SetVariableProfileAssociation("MH.HeatAreaRPMMotor", 75, "75%", "", -1);
-			IPS_SetVariableProfileAssociation("MH.HeatAreaRPMMotor", 100, "100%", "", -1);
-		}
+        $this->RegisterProfileAssociation(
+            'MH.HeatAreaRPMMotor','TurnRight','','%',
+            0,100,25,0,1,
+            [
+                [0, $this->Translate('Off'), '', -1],
+                [25, $this->Translate('25%'), '', -1],
+                [50, $this->Translate('50%'), '', -1],
+                [75, $this->Translate('75%'), '', -1],
+                [100, $this->Translate('100%'), '', -1]
+            ]
+        );
 		//HEATAREA_HEATINGSYSTEM
-		if(!IPS_VariableProfileExists("MH.HeatingSystem")){
-			IPS_CreateVariableProfile("MH.HeatingSystem", 1);
-			IPS_SetVariableProfileIcon("MH.HeatingSystem", "Lock");
-			IPS_SetVariableProfileValues("MH.HeatingSystem", 0, 4, 1);
-			IPS_SetVariableProfileAssociation("MH.HeatingSystem", 0, "FBH-Standard", "", -1);
-			IPS_SetVariableProfileAssociation("MH.HeatingSystem", 1, "FHB-Niedrigenergie", "", -1);
-			IPS_SetVariableProfileAssociation("MH.HeatingSystem", 2, "Radiator", "", -1);
-			IPS_SetVariableProfileAssociation("MH.HeatingSystem", 3, "Konvektor passiv", "", -1);
-			IPS_SetVariableProfileAssociation("MH.HeatingSystem", 4, "Konvektor aktiv", "", -1);
-		}
+        $this->RegisterProfileAssociation(
+            'MH.HeatingSystem','Lock','','',
+            0,4,1,0,1,
+            [
+                [0, $this->Translate('FBH-Standard'), '', -1],
+                [1, $this->Translate('FHB-Niedrigenergie'), '', -1],
+                [2, $this->Translate('Radiator'), '', -1],
+                [3, $this->Translate('Konvektor passiv'), '', -1],
+                [4, $this->Translate('Konvektor aktiv'), '', -1]
+            ]
+        );
 		//HEATAREA_T_ACTUAL_TEMP
-		if(!IPS_VariableProfileExists("MH.HeatAreaTActualTemp")){
-			IPS_CreateVariableProfile("MH.HeatAreaTActualTemp", 2);
-			IPS_SetVariableProfileIcon("MH.HeatAreaTActualTemp", "Temperature");
-			IPS_SetVariableProfileText("MH.HeatAreaTActualTemp", "", "°");
-			IPS_SetVariableProfileDigits("MH.HeatAreaTActualTemp", 1);
-			IPS_SetVariableProfileValues("MH.HeatAreaTActualTemp", -50, 100, 0.1);
-		}
+        $this->RegisterProfile(
+            'MH.HeatAreaTActualTemp','Temperature','','°',
+            -50,100, 0.11, 1,2);
 		//HEATAREA_T_TARGET
-		if(!IPS_VariableProfileExists("MH.HeatAreaTTarget")){
-			IPS_CreateVariableProfile("MH.HeatAreaTTarget", 2);
-			IPS_SetVariableProfileIcon("MH.HeatAreaTTarget", "Temperature");
-			IPS_SetVariableProfileText("MH.HeatAreaTTarget", "", "°");
-			IPS_SetVariableProfileDigits("MH.HeatAreaTTarget", 1);
-			IPS_SetVariableProfileValues("MH.HeatAreaTTarget", 5, 30, 0.2);
-		}
+        $this->RegisterProfile(
+            'MH.HeatAreaTTarget','Temperature','','°',
+            5,30, 0.2, 1,2);
 		//HEATAREA_T_HEATCOOL
-		if(!IPS_VariableProfileExists("MH.HeatAreaTHeatCool")){
-			IPS_CreateVariableProfile("MH.HeatAreaTHeatCool", 2);
-			IPS_SetVariableProfileIcon("MH.HeatAreaTHeatCool", "Temperature");
-			IPS_SetVariableProfileText("MH.HeatAreaTHeatCool", "", "°");
-			IPS_SetVariableProfileDigits("MH.HeatAreaTHeatCool", 1);
-			IPS_SetVariableProfileValues("MH.HeatAreaTHeatCool", 5, 30, 1);
-		}
+        $this->RegisterProfile(
+            'MH.HeatAreaTHeatCool','Temperature','','°',
+            5,30, 1, 1,2);
 		//HEATAREA_OFFSET
-		if(!IPS_VariableProfileExists("MH.HeatAreaOffset")){
-			IPS_CreateVariableProfile("MH.HeatAreaOffset", 2);
-			IPS_SetVariableProfileIcon("MH.HeatAreaOffset", "Temperature");
-			IPS_SetVariableProfileText("MH.HeatAreaOffset", "", "°");
-			IPS_SetVariableProfileDigits("MH.HeatAreaOffset", 1);
-			IPS_SetVariableProfileValues("MH.HeatAreaOffset", -2, 2, 0.1);
-		}
+        $this->RegisterProfile(
+                'MH.HeatAreaOffset','Temperature','','°',
+                -2, 2, 0.1, 1,2);
 		//HEATAREA_BLOCK_HC
-		if(!IPS_VariableProfileExists("MH.HeatAreaBlockHC")){
-			IPS_CreateVariableProfile("MH.HeatAreaBlockHC", 1);
-			IPS_SetVariableProfileIcon("MH.HeatAreaBlockHC", "Lock");
-			IPS_SetVariableProfileValues("MH.HeatAreaBlockHC", 0, 2, 1);
-			IPS_SetVariableProfileAssociation("MH.HeatAreaBlockHC", 0, "Normal", "", -1);
-			IPS_SetVariableProfileAssociation("MH.HeatAreaBlockHC", 1, "Heizen sperren", "", -1);
-			IPS_SetVariableProfileAssociation("MH.HeatAreaBlockHC", 2, "Kühlen sperren", "", -1);
-		}
+        $this->RegisterProfileAssociation(
+            'MH.HeatAreaBlockHC','Lock','','',
+            0,2,1,0,1,
+            [
+                [0, $this->Translate('Normal'), '', -1],
+                [1, $this->Translate('Heizen sperren'), '', -1],
+                [2, $this->Translate('Kühlen sperren'), '', -1],
+            ]
+        );
 		//HEATAREA_HEATCTRL_STATE
-		if(!IPS_VariableProfileExists("MH.HeatAreaHeatCTRLState")){
-			IPS_CreateVariableProfile("MH.HeatAreaHeatCTRLState", 1);
-			IPS_SetVariableProfileIcon("MH.HeatAreaHeatCTRLState", "Shutter");
-			IPS_SetVariableProfileValues("MH.HeatAreaHeatCTRLState", 0, 2, 1);
-			IPS_SetVariableProfileAssociation("MH.HeatAreaHeatCTRLState", 0, "Aus", "", -1);
-			IPS_SetVariableProfileAssociation("MH.HeatAreaHeatCTRLState", 1, "An", "", 0x00FF00);
-			IPS_SetVariableProfileAssociation("MH.HeatAreaHeatCTRLState", 2, "Fehler", "", 0xFF0000);
-		}
+        $this->RegisterProfileAssociation(
+            'MH.HeatAreaHeatCTRLState','Shutter','','',
+            0,2,1,0,1,
+            [
+                [0, $this->Translate('Off'), '', -1],
+                [1, $this->Translate('On'), '', 0x00FF00],
+                [2, $this->Translate('Error'), '', 0xFF0000],
+            ]
+        );
 		//HEATAREA_HEATCTRL_NR
-		if(!IPS_VariableProfileExists("MH.HeatAreaNr")){
-			IPS_CreateVariableProfile("MH.HeatAreaNr", 1);
-			IPS_SetVariableProfileIcon("MH.HeatAreaNr", "Shutter");
-			IPS_SetVariableProfileValues("MH.HeatAreaNr", 1, 12, 1);
-		}
-		
+        $this->RegisterProfile(
+            'MH.HeatAreaNr','Shutter','','',
+            1, 12, 1, 0,1);
 		//HEATAREA_RPM_MOTOR
-		if(!IPS_VariableProfileExists("MH.HeatCtrlActorPercent")){
-			IPS_CreateVariableProfile("MH.HeatCtrlActorPercent", 1);
-			IPS_SetVariableProfileIcon("MH.HeatCtrlActorPercent", "Intensity");
-			IPS_SetVariableProfileValues("MH.HeatCtrlActorPercent", 0, 100, 1);
-			IPS_SetVariableProfileText("MH.HeatCtrlActorPercent", "", "%");
-		}
+        $this->RegisterProfile(
+            'MH.HeatCtrlActorPercent','Intensity','','%',
+            1, 100, 1, 0,1);
 	}
 
 	public function Destroy(){
@@ -673,7 +636,74 @@ class MoehlenhoffAlpha2 extends IPSModule
 		
 	}
 
-	public function WriteValue($Ident, $Value) {
+    /**
+     * register profiles
+     * @param $Name
+     * @param $Icon
+     * @param $Prefix
+     * @param $Suffix
+     * @param $MinValue
+     * @param $MaxValue
+     * @param $StepSize
+     * @param $Digits
+     * @param $Vartype
+     */
+    protected function RegisterProfile($Name, $Icon, $Prefix, $Suffix, $MinValue, $MaxValue, $StepSize, $Digits, $Vartype)
+    {
+        if (!IPS_VariableProfileExists($Name))
+        {
+            IPS_CreateVariableProfile($Name, $Vartype); // 0 boolean, 1 int, 2 float, 3 string,
+        } else {
+            $profile = IPS_GetVariableProfile($Name);
+            if ($profile['ProfileType'] != $Vartype) {
+                $this->_debug('profile', 'Variable profile type does not match for profile ' . $Name);
+            }
+        }
+        IPS_SetVariableProfileIcon($Name, $Icon);
+        IPS_SetVariableProfileText($Name, $Prefix, $Suffix);
+        IPS_SetVariableProfileDigits($Name, $Digits); //  Nachkommastellen
+        IPS_SetVariableProfileValues($Name, $MinValue, $MaxValue, $StepSize); // string $ProfilName, float $Minimalwert, float $Maximalwert, float $Schrittweite
+    }
+
+    /**
+     * register profile association
+     * @param $Name
+     * @param $Icon
+     * @param $Prefix
+     * @param $Suffix
+     * @param $MinValue
+     * @param $MaxValue
+     * @param $Stepsize
+     * @param $Digits
+     * @param $Vartype
+     * @param $Associations
+     */
+    protected function RegisterProfileAssociation($Name, $Icon, $Prefix, $Suffix, $MinValue, $MaxValue, $Stepsize, $Digits, $Vartype, $Associations)
+    {
+        if (is_array($Associations) && sizeof($Associations) === 0) {
+            $MinValue = 0;
+            $MaxValue = 0;
+        }
+        $this->RegisterProfile($Name, $Icon, $Prefix, $Suffix, $MinValue, $MaxValue, $Stepsize, $Digits, $Vartype);
+        if (is_array($Associations)) {
+            foreach ($Associations AS $Association) {
+                IPS_SetVariableProfileAssociation($Name, $Association[0], $Association[1], $Association[2], $Association[3]);
+            }
+        } else {
+            $Associations = $this->$Associations;
+            foreach ($Associations AS $code => $association) {
+                IPS_SetVariableProfileAssociation($Name, $code, $this->Translate($association), $Icon, -1);
+            }
+        }
+    }
+
+
+    /**
+     * @param $Ident
+     * @param $Value
+     * @throws Exception
+     */
+    public function WriteValue($Ident, $Value) {
 
 		$xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><Devices></Devices>');
 
@@ -711,8 +741,10 @@ class MoehlenhoffAlpha2 extends IPSModule
 		}
 
 		//IPS_LogMessage("Alpha2", $xml->asXML());
-		
-		if ($this->sendChanges($xml)) {
+
+        // Wurden die Änderung erfolgreich an die Basis gesendet wird der Wert in IP Symcon aktuallisiert
+		if ($this->sendChanges($xml))
+		{
 			SetValue($this->GetIDForIdent($Ident), $Value);
 		}
 		
@@ -743,66 +775,92 @@ class MoehlenhoffAlpha2 extends IPSModule
 
 		$data = curl_exec($ch);
 
-		if(curl_errno($ch)) {
+		// Konnten die Daten nicht an die Basis gesendet werden false zurückgeben
+		if(curl_errno($ch))
+		{
 			print curl_error($ch);
 			curl_close($ch);
 			return false;
-		} else {
-			curl_close($ch);
-			return true;
 		}
+    	curl_close($ch);
 
+		// Prüfe ob $data OK zurückliefert
+        /*
+         * <?xml version="1.0" encoding="UTF-8"?>
+         * <COMMANDRESPONSE>
+         *    <STATE>OK</STATE>
+         *    <ERRORNUMBER>0</ERRORNUMBER>
+         * </COMMANDRESPONSE>
+         */
+        return true;
 	}
 
-	public function RequestStatus(){
-
+	public function RequestStatus()
+    {
 		$xml = @simplexml_load_file("http://".$this->ReadPropertyString('IPAddress')."/data/static.xml");
-		if($xml === false) {
+		if($xml === false)
+		{
 			return;
 		}
 		
 		$this->SetValuesArray(self::$values, $xml);
 		
-		if (GetValue($this->GetIDForIdent($this->ReduceToIdent("VERS_SW_STM"))) >= "02.02"){
+		if (GetValue($this->GetIDForIdent($this->ReduceToIdent("VERS_SW_STM"))) >= "02.02")
+		{
 			$this->MaintainArray(self::$valuesHeatCtrlExt);
 			$this->SetValuesArray(self::$valuesHeatCtrlExt, $xml);
-		} else {
+		}
+		else
+		{
 			$this->MaintainArray(self::$valuesHeatCtrl);
 			$this->SetValuesArray(self::$valuesHeatCtrl, $xml);
 		}
 
 	}
 
-	private function MaintainArray($Array) {
-		foreach($Array as $key => $value){
-			if(!isset($value["Keep"])){
+	private function MaintainArray($Array)
+    {
+		foreach($Array as $key => $value)
+		{
+			if(!isset($value["Keep"]))
+			{
 				$keep = true;
-			} else {
+			}
+			else
+			{
 				$keep = $this->ReadPropertyBoolean($value["Keep"]);
 			}
 			$this->MaintainVariable($this->ReduceToIdent($key), $value["Name"], $value["Type"], $value["Profile"], $value["Position"], $keep);
 
-			if ($keep && $value["Action"]){
+			if ($keep && $value["Action"])
+			{
 				$this->EnableAction($this->ReduceToIdent($key));
 			}
 		}
 	}
 
-	private function SetValuesArray($Array, $Xml) {
-		foreach($Array as $key => $value) {
-			if(!isset($value["Keep"])){
+	private function SetValuesArray($Array, $Xml)
+    {
+		foreach($Array as $key => $value)
+		{
+			if(!isset($value["Keep"]))
+			{
 				$keep = true;
-			} else {
+			}
+			else
+			{
 				$keep = $this->ReadPropertyBoolean($value["Keep"]);
 			}
 			
-			if ($keep && (sizeof($Xml->Device->xpath($key)) != 0)){
+			if ($keep && (sizeof($Xml->Device->xpath($key)) != 0))
+			{
 				SetValue($this->GetIDForIdent($this->ReduceToIdent($key)), (string)$Xml->Device->xpath($key)[0]);
 			}
 		}
 	}
 
-	private function ReduceToIdent($ID) {
+	private function ReduceToIdent($ID)
+    {
 		return str_replace(Array("[@nr='", "']", "/"), Array("", "", "_"), $ID);
 	}
 

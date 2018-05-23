@@ -1,5 +1,5 @@
 {
-    "id": "{87F46796-CC43-442D-94FD-9990BD8D9F54}",
+    "id": "{40fe6bc5-aa7f-4b73-9704-b2252a750fdc}",
     "name": "MoehlenhoffAlpha2",
     "type": 3,
     "vendor": "Möhlenhoff",
@@ -10,5 +10,5 @@
     "parentRequirements": [],
     "childRequirements": [],
     "implemented": [],
-    "prefix": "MA2"
+    "prefix": "MAlpha2"
 }
