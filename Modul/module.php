@@ -2,8 +2,12 @@
 class MoehlenhoffAlpha2 extends IPSModule
 {
 
-	private static $values = Array(
+	private static $base = Array(
 		"ID" => Array("Name" => "Basis ID", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 50),
+		//type
+        //Name
+        //Origin
+        //ErrorCode
 		"VERS_SW_STM" => Array("Name" => "Basis SW STM Version", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 50),
 		"VERS_SW_ETH" => Array("Name" => "Basis SW ETH Version", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 50),
 		"VERS_HW" => Array("Name" => "Basis HW Version", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 50),
@@ -19,7 +23,8 @@ class MoehlenhoffAlpha2 extends IPSModule
 		"ANTIFREEZE_TEMP" => Array("Name" => "Basis Frostschutz Temperatur", "Type" => 1, "Profile" => "MH.AntifreezeTemp", "Action" => true, "Position" => 50),
 		"ECO_DIFF" => Array("Name" => "Basis Absenkdifferenztemperatur", "Type" => 2, "Profile" => "MH.EcoDiff", "Action" => true, "Position" => 50),
 		"T_HEAT_VACATION" => Array("Name" => "Basis Urlaub Temperatur Heizen", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 50),
-		"VACATION/VACATION_STATE" => Array("Name" => "Basis Urlaub Status", "Type" => 1, "Profile" => "MH.VacationState", "Action" => true, "Position" => 50),
+
+        "VACATION/VACATION_STATE" => Array("Name" => "Basis Urlaub Status", "Type" => 1, "Profile" => "MH.VacationState", "Action" => true, "Position" => 50),
 		"ECO_INPUT_STATE" => Array("Name" => "Basis Absenkeingang", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 50),
 		//"PUMP_OUTPUT/PUMP_LEADTIME" => Array("Name" => "Pumpen Vorlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50),
 		//"PUMP_OUTPUT/PUMP_STOPPINGTIME" => Array("Name" => "Pumpen Nachlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50),
@@ -28,8 +33,11 @@ class MoehlenhoffAlpha2 extends IPSModule
 		//"EMERGENCYMODE/EMERGENCYMODE_TIME" => Array("Name" => "Notbetrieb Aktivierungszeit (Minuten)", "Type" => 1, "Profile" => "MH.EmergencyTime", "Action" => true, "Position" => 50),
 		//"EMERGENCYMODE/PWMCYCLE" => Array("Name" => "Notbetrieb PWM-Zyklusdauer (Minuten)", "Type" => 1, "Profile" => "MH.PWMCycle", "Action" => true, "Position" => 50),
 		//"EMERGENCYMODE/PWMHEAT" => Array("Name" => "Notbetrieb PWM Heizendauer (Prozent)", "Type" => 1, "Profile" => "MH.PWMPercent", "Action" => true, "Position" => 50),
-		//"EMERGENCYMODE/PWMCOOL" => Array("Name" => "Notbetrieb PWM Kühlendauer (Prozent)", "Type" => 1, "Profile" => "MH.PWMPercent", "Action" => true, "Position" => 50),
-		"HEATAREA[@nr='1']/HEATAREA_NAME" => Array("Name" => "Heizzone 01 Name", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
+		"EMERGENCYMODE/PWMCOOL" => Array("Name" => "Notbetrieb PWM Kühlendauer (Prozent)", "Type" => 1, "Profile" => "MH.PWMPercent", "Action" => true, "Position" => 50)
+    );
+
+	private static $values = Array(
+        "HEATAREA[@nr='1']/HEATAREA_NAME" => Array("Name" => "Heizzone 01 Name", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
 		"HEATAREA[@nr='1']/HEATAREA_MODE" => Array("Name" => "Heizzone 01 Betriebsmodus", "Type" => 1, "Profile" => "MH.HeatAreaMode", "Action" => true, "Position" => 62, "Keep" => "ShowHeatArea01"),
 		"HEATAREA[@nr='1']/T_ACTUAL" => Array("Name" => "Heizzone 01 Ist Temperatur", "Type" => 2, "Profile" => "MH.HeatAreaTActualTemp", "Action" => false, "Position" => 60, "Keep" => "ShowHeatArea01"),
 		"HEATAREA[@nr='1']/T_ACTUAL_EXT" => Array("Name" => "Heizzone 01 Ist Temperatur Ext. Sensor", "Type" => 2, "Profile" => "MH.HeatAreaTActualTemp", "Action" => false, "Position" => 63, "Keep" => "ShowHeatArea01"),
@@ -632,6 +640,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 
 		$this->SetTimerInterval("UpdateTimer", $this->ReadPropertyInteger("Interval")*1000);
 
+		$this->MaintainArray(self::$base);
 		$this->MaintainArray(self::$values);
 		
 	}
@@ -802,7 +811,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		{
 			return;
 		}
-		
+		$this->SetValuesArray(self::$base, $xml);
 		$this->SetValuesArray(self::$values, $xml);
 		
 		if (GetValue($this->GetIDForIdent($this->ReduceToIdent("VERS_SW_STM"))) >= "02.02")

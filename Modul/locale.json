@@ -1,6 +1,18 @@
 {
 	"translations": {
 		"de": {
+			"Vacation": "Herstellerinformation",
+			"Network": "Netzwerk",
+			"Cloud": "Cloud",
+			"KWLCTRL": "KWLCTRL",
+			"Expert Access Code": "Expert Zugriffs Code",
+			"Program": "Programme",
+			"Pump Output": "Pumpen Ausgang",
+			"Relais": "Relais",
+			"Change over Function": "Change over Function",
+			"Emergency Mode": "Not Funktion",
+			"ValveProtect": "ValveProtect",
+			"Pump Protect": "Pumpen Schutz",
 			"Celsius": "Celsius",
 			"Fahrenheit":"Fahrenheit",
 			"On": "An",
