@@ -20,6 +20,6 @@
   ],
   "actions":
   [
-	{ "type": "Button", "label": "Gerät auslesen", "onClick": "MA2_RequestStatus($id);" }
+	{ "type": "Button", "label": "Gerät auslesen", "onClick": "MAlpha2_RequestStatus($id);" }
   ]
 }

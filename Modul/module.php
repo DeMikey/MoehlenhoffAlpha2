@@ -441,7 +441,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		$this->RegisterPropertyBoolean("ShowHeatArea12", false);
 
 		//Timer
-		$this->RegisterTimer("UpdateTimer", 0, 'MA2_RequestStatus($_IPS[\'TARGET\']);');
+		$this->RegisterTimer("UpdateTimer", 0, 'MAlpha2_RequestStatus($_IPS[\'TARGET\']);');
 
 		//Variablenprofile
 		//ANTIFREEZE_TEMP
