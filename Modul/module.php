@@ -3,7 +3,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 {
 
 	private static $base = Array(
-		"ID" => Array("Name" => "Basis ID", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 50),
+		"ID" => Array("Name" => "Basis ID", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 00),
         "TYPE" => Array("Name" => "Basis Type", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 50),
         "NAME" => Array("Name" => "Basis Name", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 50),
         "ORIGIN" => Array("Name" => "Basis Origin", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 51),
@@ -33,12 +33,42 @@ class MoehlenhoffAlpha2 extends IPSModule
         "ECO_INPUTMODE" => Array("Name" => "Basis Absenkeingang", "Type" => 0, "Profile" => "", "Action" => false, "Position" => 50),
         "ECO_INPUT_STATE" => Array("Name" => "Basis Absenkeingang", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 50),
 		"T_HEAT_VACATION" => Array("Name" => "Basis Urlaub Temperatur Heizen", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 50),
-
+        // Urlaubs Settings
         "VACATION/VACATION_STATE" => Array("Name" => "Basis Urlaub Status", "Type" => 1, "Profile" => "MH.VacationState", "Action" => true, "Position" => 50, "Keep" => "ShowVacation"),
         "VACATION/START_DATE" => Array("Name" => "Basis Urlaub Start Datum", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 13, "Keep" => "ShowVacation"),
         "VACATION/START_TIME" => Array("Name" => "Basis Urlaub Start Zeit", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 12, "Keep" => "ShowVacation"),
         "VACATION/END_DATE" => Array("Name" => "Basis Urlaub End Datum", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 10, "Keep" => "ShowVacation"),
         "VACATION/END_TIME" => Array("Name" => "Basis Urlaub End Zeit", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 10, "Keep" => "ShowVacation"),
+        // Network Settings
+        "NETWORK/MAC" => Array("Name" => "Basis Network Mac Address", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/DHCP" => Array("Name" => "Basis Network DHCP enabled", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/IPV6ACTIVE" => Array("Name" => "Basis Network IP6 active", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/IPV4ACTUAL" => Array("Name" => "Basis Network IP4 active Address", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/IPV4SET" => Array("Name" => "Basis Network IP4 Address", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/IPV6ACTUAL" => Array("Name" => "Basis Network IP6 active Address", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/IPV6SET" => Array("Name" => "Basis Network IP6 Address", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/NETMASKACTUAL" => Array("Name" => "Basis Network active Netmask", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/NETMASKSET" => Array("Name" => "Basis Network Netmask", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/DNS" => Array("Name" => "Basis Network DNS Server", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/GATEWAY" => Array("Name" => "Basis Network Gateway", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
+		//Cloud
+        "CLOUD/USERID" => Array("Name" => "Basis Cloud User ID", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 80, "Keep" => "ShowCloud"),
+        "CLOUD/PASSWORD" => Array("Name" => "Basis Cloud Password", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 80, "Keep" => "ShowCloud"),
+        "CLOUD/M2MSERVERPORT" => Array("Name" => "Basis Cloud M2M Server Port", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
+        "CLOUD/M2MLOCALPORT" => Array("Name" => "Basis Cloud M2M local Port", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
+        "CLOUD/M2MHTTPPORT" => Array("Name" => "Basis Cloud M2M HTTP Port", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
+        "CLOUD/M2MHTTPSPORT" => Array("Name" => "Basis Cloud M2m HTTPs Port", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
+        "CLOUD/M2MSERVERADDRESS" => Array("Name" => "Basis Cloud M2M Server Address", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
+        "CLOUD/M2MACTIVE" => Array("Name" => "Basis Cloud M2M active", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
+        "CLOUD/M2MSTATE" => Array("Name" => "Basis Cloud M2M state", "Type" => 0, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowCloud"),
+        // KWLCTRL
+        "KWLCTRL/KWL_CONTROL_VISIBLE" => Array("Name" => "Basis KWL Control Visible", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowKWLCTRL"),
+        "KWLCTRL/KWL_PRESENT" => Array("Name" => "Basis KWL Present", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowKWLCTRL"),
+        "KWLCTRL/KWL_CONNECTION" => Array("Name" => "Basis KWL Connection", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowKWLCTRL"),
+        "KWLCTRL/KWL_URL" => Array("Name" => "Basis KWL Url", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowKWLCTRL"),
+        "KWLCTRL/KWL_PORT" => Array("Name" => "Basis KWL Port", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowKWLCTRL"),
+        "KWLCTRL/KWL_STATUS" => Array("Name" => "Basis KWL Status", "Type" => 0, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowKWLCTRL"),
+        "KWLCTRL/KWL_FLOWCTRL" => Array("Name" => "Basis KWL Flow Control", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowKWLCTRL"),
 		//"PUMP_OUTPUT/PUMP_LEADTIME" => Array("Name" => "Pumpen Vorlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50),
 		//"PUMP_OUTPUT/PUMP_STOPPINGTIME" => Array("Name" => "Pumpen Nachlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50),
 		//"RELAIS/RELAIS_LEADTIME" => Array("Name" => "Relais Vorlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.RelaisTime", "Action" => true, "Position" => 50),
