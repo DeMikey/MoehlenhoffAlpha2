@@ -35,7 +35,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		"T_HEAT_VACATION" => Array("Name" => "Basis Urlaub Temperatur Heizen", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 50),
 
         "VACATION/VACATION_STATE" => Array("Name" => "Basis Urlaub Status", "Type" => 1, "Profile" => "MH.VacationState", "Action" => true, "Position" => 50, "Keep" => "ShowVacation"),
-        "VACATION/START_DATE" => Array("Name" => "Basis Urlaub Start Datum", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 50), "Keep" => "ShowVacation",
+        "VACATION/START_DATE" => Array("Name" => "Basis Urlaub Start Datum", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowVacation"),
         "VACATION/START_TIME" => Array("Name" => "Basis Urlaub Start Zeit", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowVacation"),
         "VACATION/END_DATE" => Array("Name" => "Basis Urlaub End Datum", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowVacation"),
         "VACATION/END_TIME" => Array("Name" => "Basis Urlaub End Zeit", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowVacation"),
