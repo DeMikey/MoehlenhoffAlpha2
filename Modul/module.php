@@ -34,7 +34,11 @@ class MoehlenhoffAlpha2 extends IPSModule
         "ECO_INPUT_STATE" => Array("Name" => "Basis Absenkeingang", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 50),
 		"T_HEAT_VACATION" => Array("Name" => "Basis Urlaub Temperatur Heizen", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 50),
 
-        "VACATION/VACATION_STATE" => Array("Name" => "Basis Urlaub Status", "Type" => 1, "Profile" => "MH.VacationState", "Action" => true, "Position" => 50),
+        "VACATION/VACATION_STATE" => Array("Name" => "Basis Urlaub Status", "Type" => 1, "Profile" => "MH.VacationState", "Action" => true, "Position" => 50, "Keep" => "ShowVacation"),
+        "VACATION/START_DATE" => Array("Name" => "Basis Urlaub Start Datum", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 50), "Keep" => "ShowVacation",
+        "VACATION/START_TIME" => Array("Name" => "Basis Urlaub Start Zeit", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowVacation"),
+        "VACATION/END_DATE" => Array("Name" => "Basis Urlaub End Datum", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowVacation"),
+        "VACATION/END_TIME" => Array("Name" => "Basis Urlaub End Zeit", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowVacation"),
 		//"PUMP_OUTPUT/PUMP_LEADTIME" => Array("Name" => "Pumpen Vorlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50),
 		//"PUMP_OUTPUT/PUMP_STOPPINGTIME" => Array("Name" => "Pumpen Nachlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50),
 		//"RELAIS/RELAIS_LEADTIME" => Array("Name" => "Relais Vorlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.RelaisTime", "Action" => true, "Position" => 50),
