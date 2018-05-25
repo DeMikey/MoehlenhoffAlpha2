@@ -74,16 +74,16 @@ class MoehlenhoffAlpha2 extends IPSModule
         // Programm
         "PROGRAM/SHIFT_PROGRAM[@nr='1'][@shiftingtime='1']/START" => Array("Name" => "Basis Program 1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
         "PROGRAM/SHIFT_PROGRAM[@nr='1'][@shiftingtime='1']/END" => Array("Name" => "Basis Program 1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM [@nr='2'] [@shiftingtime='1']/START" => Array("Name" => "Basis Program 2-1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM [@nr='2'] [@shiftingtime='1']/END" => Array("Name" => "Basis Program 2-1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM [@nr='2'] [@shiftingtime='2']/START" => Array("Name" => "Basis Program 2-2 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM [@nr='2'] [@shiftingtime='2']/END" => Array("Name" => "Basis Program 2-2 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM [@nr='3'] [@shiftingtime='1']/START" => Array("Name" => "Basis Program 3-1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM [@nr='3'] [@shiftingtime='1']/END" => Array("Name" => "Basis Program 3-1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM [@nr='3'] [@shiftingtime='2']/START" => Array("Name" => "Basis Program 3-2 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM [@nr='3'] [@shiftingtime='2']/END" => Array("Name" => "Basis Program 3-2 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM [@nr='4'] [@shiftingtime='1']/START" => Array("Name" => "Basis Program 4 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM [@nr='4'] [@shiftingtime='1']/END" => Array("Name" => "Basis Program 4 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='2'][@shiftingtime='1']/START" => Array("Name" => "Basis Program 2-1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='2'][@shiftingtime='1']/END" => Array("Name" => "Basis Program 2-1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='2'][@shiftingtime='2']/START" => Array("Name" => "Basis Program 2-2 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='2'][@shiftingtime='2']/END" => Array("Name" => "Basis Program 2-2 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='3'][@shiftingtime='1']/START" => Array("Name" => "Basis Program 3-1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='3'][@shiftingtime='1']/END" => Array("Name" => "Basis Program 3-1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='3'][@shiftingtime='2']/START" => Array("Name" => "Basis Program 3-2 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='3'][@shiftingtime='2']/END" => Array("Name" => "Basis Program 3-2 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='4'][@shiftingtime='1']/START" => Array("Name" => "Basis Program 4 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='4'][@shiftingtime='1']/END" => Array("Name" => "Basis Program 4 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
 		//"PUMP_OUTPUT/PUMP_LEADTIME" => Array("Name" => "Pumpen Vorlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50),
 		//"PUMP_OUTPUT/PUMP_STOPPINGTIME" => Array("Name" => "Pumpen Nachlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50),
 		//"RELAIS/RELAIS_LEADTIME" => Array("Name" => "Relais Vorlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.RelaisTime", "Action" => true, "Position" => 50),
@@ -910,7 +910,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 			{
 				$keep = $this->ReadPropertyBoolean($value["Keep"]);
 			}
-			$this->MaintainVariable($this->ReduceToIdent($key), $value["Name"], $value["Type"], $value["Profile"], $value["Position"], $keep);
+			$this->MaintainVariable($this->ReduceToIdent($key), $this->Translate( $value["Name"]), $value["Type"], $value["Profile"], $value["Position"], $keep);
 
 			if ($keep && $value["Action"])
 			{
