@@ -70,28 +70,46 @@ class MoehlenhoffAlpha2 extends IPSModule
         "KWLCTRL/KWL_STATUS" => Array("Name" => "Basis KWL Status", "Type" => 0, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowKWLCTRL"),
         "KWLCTRL/KWL_FLOWCTRL" => Array("Name" => "Basis KWL Flow Control", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowKWLCTRL"),
 		// ExpertCode
-        "CODE/EXPERT" => Array("Name" => "Basis Expert Code", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCode"),
+        "CODE/EXPERT" => Array("Name" => "Expert Code", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCode"),
         // Programm
-        "PROGRAM/SHIFT_PROGRAM[@nr='1'][@shiftingtime='1']/START" => Array("Name" => "Basis Program 1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM[@nr='1'][@shiftingtime='1']/END" => Array("Name" => "Basis Program 1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM[@nr='2'][@shiftingtime='1']/START" => Array("Name" => "Basis Program 2-1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM[@nr='2'][@shiftingtime='1']/END" => Array("Name" => "Basis Program 2-1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM[@nr='2'][@shiftingtime='2']/START" => Array("Name" => "Basis Program 2-2 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM[@nr='2'][@shiftingtime='2']/END" => Array("Name" => "Basis Program 2-2 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM[@nr='3'][@shiftingtime='1']/START" => Array("Name" => "Basis Program 3-1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM[@nr='3'][@shiftingtime='1']/END" => Array("Name" => "Basis Program 3-1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM[@nr='3'][@shiftingtime='2']/START" => Array("Name" => "Basis Program 3-2 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM[@nr='3'][@shiftingtime='2']/END" => Array("Name" => "Basis Program 3-2 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM[@nr='4'][@shiftingtime='1']/START" => Array("Name" => "Basis Program 4 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM[@nr='4'][@shiftingtime='1']/END" => Array("Name" => "Basis Program 4 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-		//"PUMP_OUTPUT/PUMP_LEADTIME" => Array("Name" => "Pumpen Vorlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50),
-		//"PUMP_OUTPUT/PUMP_STOPPINGTIME" => Array("Name" => "Pumpen Nachlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50),
-		//"RELAIS/RELAIS_LEADTIME" => Array("Name" => "Relais Vorlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.RelaisTime", "Action" => true, "Position" => 50),
-		//"RELAIS/RELAIS_STOPPINGTIME" => Array("Name" => "Relais Nachlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.RelaisTime", "Action" => true, "Position" => 50),
-		"EMERGENCYMODE/EMERGENCYMODE_TIME" => Array("Name" => "Notbetrieb Aktivierungszeit (Minuten)", "Type" => 1, "Profile" => "MH.EmergencyTime", "Action" => true, "Position" => 50),
-		"EMERGENCYMODE/PWMCYCLE" => Array("Name" => "Notbetrieb PWM-Zyklusdauer (Minuten)", "Type" => 1, "Profile" => "MH.PWMCycle", "Action" => true, "Position" => 50),
-		"EMERGENCYMODE/PWMHEAT" => Array("Name" => "Notbetrieb PWM Heizendauer (Prozent)", "Type" => 1, "Profile" => "MH.PWMPercent", "Action" => true, "Position" => 50),
-		"EMERGENCYMODE/PWMCOOL" => Array("Name" => "Notbetrieb PWM Kühlendauer (Prozent)", "Type" => 1, "Profile" => "MH.PWMPercent", "Action" => true, "Position" => 50)
+        "PROGRAM/SHIFT_PROGRAM[@nr='1'][@shiftingtime='1']/START" => Array("Name" => "Program 1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='1'][@shiftingtime='1']/END" => Array("Name" => "Program 1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='2'][@shiftingtime='1']/START" => Array("Name" => "Program 2-1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='2'][@shiftingtime='1']/END" => Array("Name" => "Program 2-1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='2'][@shiftingtime='2']/START" => Array("Name" => "Program 2-2 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='2'][@shiftingtime='2']/END" => Array("Name" => "Program 2-2 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='3'][@shiftingtime='1']/START" => Array("Name" => "Program 3-1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='3'][@shiftingtime='1']/END" => Array("Name" => "Program 3-1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='3'][@shiftingtime='2']/START" => Array("Name" => "Program 3-2 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='3'][@shiftingtime='2']/END" => Array("Name" => "Program 3-2 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='4'][@shiftingtime='1']/START" => Array("Name" => "Program 4 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='4'][@shiftingtime='1']/END" => Array("Name" => "Program 4 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+		// PUMP_OUTPUT
+        "PUMP_OUTPUT/LOCALGLOBAL" => Array("Name" => "Pump local or global", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowPumpOutput"),
+        "PUMP_OUTPUT/PUMP_OUTPUT_TYPE" => Array("Name" => "Pump Output Type", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowPumpOutput"),
+        "PUMP_OUTPUT/PUMP_LEADTIME" => Array("Name" => "Pump lead Time (Minute)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50, "Keep" => "ShowPumpOutput"),
+		"PUMP_OUTPUT/PUMP_STOPPINGTIME" => Array("Name" => "Pump stopping Time (Minute)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50, "Keep" => "ShowPumpOutput"),
+        "PUMP_OUTPUT/PUMP_OPERATIONMODE" => Array("Name" => "Pump Operation Mode", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowPumpOutput"),
+        "PUMP_OUTPUT/MINRUNTIME" => Array("Name" => "Pump minimum Runtime (Minute)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50, "Keep" => "ShowPumpOutput"),
+        "PUMP_OUTPUT/MINSTANDSTILL" => Array("Name" => "Pump minimum Standbytime (Minute)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50, "Keep" => "ShowPumpOutput"),
+        // RELAIS
+        "RELAIS/FUNCTION" => Array("Name" => "Relais Function", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowRelais"),
+		"RELAIS/RELAIS_LEADTIME" => Array("Name" => "Relais lead Time (Minute)", "Type" => 1, "Profile" => "MH.RelaisTime", "Action" => true, "Position" => 50, "Keep" => "ShowRelais"),
+		"RELAIS/RELAIS_STOPPINGTIME" => Array("Name" => "Relais stopping Time (Minute)", "Type" => 1, "Profile" => "MH.RelaisTime", "Action" => true, "Position" => 50, "Keep" => "ShowRelais"),
+        "RELAIS/RELAIS_OPERATIONMODE" => Array("Name" => "Relais Operation Mode", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowRelais"),
+        // CHANGEOVER_FUNC
+        "CHANGEOVER_FUNC/CHANGEOVER_FUNC_MODE" => Array("Name" => "Change over Function Mode", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowChangeOverFunc"),
+        // EMERGENCYMODE
+		"EMERGENCYMODE/EMERGENCYMODE_TIME" => Array("Name" => "Notbetrieb Aktivierungszeit (Minuten)", "Type" => 1, "Profile" => "MH.EmergencyTime", "Action" => true, "Position" => 50, "Keep" => "ShowEmergencyMode"),
+		"EMERGENCYMODE/PWMCYCLE" => Array("Name" => "Notbetrieb PWM-Zyklusdauer (Minuten)", "Type" => 1, "Profile" => "MH.PWMCycle", "Action" => true, "Position" => 50, "Keep" => "ShowEmergencyMode"),
+		"EMERGENCYMODE/PWMHEAT" => Array("Name" => "Notbetrieb PWM Heizendauer (Prozent)", "Type" => 1, "Profile" => "MH.PWMPercent", "Action" => true, "Position" => 50, "Keep" => "ShowEmergencyMode"),
+		"EMERGENCYMODE/PWMCOOL" => Array("Name" => "Notbetrieb PWM Kühlendauer (Prozent)", "Type" => 1, "Profile" => "MH.PWMPercent", "Action" => true, "Position" => 50, "Keep" => "ShowEmergencyMode"),
+		// VALVEPROTECT
+		"VALVEPROTECT/VALVEPROTECT_TIME" => Array("Name" => "Valve Protected Time (Minute)", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowValveProtect"),
+        "VALVEPROTECT/DURATION" => Array("Name" => "Valve Protected Duration (Minute)", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowValveProtect"),
+        // PUMPPROTECT
+        "PUMPPROTECT/PUMPPROTECT_TIME" => Array("Name" => "Pump Protected Time (Minute)", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowValveProtect"),
+        "PUMPPROTECT/DURATION" => Array("Name" => "Pump Protected Duration (Minute)", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowValveProtect")
     );
 
 	private static $values = Array(

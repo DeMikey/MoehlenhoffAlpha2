@@ -15,7 +15,7 @@
 	  { "type": "CheckBox", "name": "ShowRelais", "caption": "Pump Relais"},
 	  { "type": "CheckBox", "name": "ShowChangeOverFunc", "caption": "Change over Function"},
 	  { "type": "CheckBox", "name": "ShowEmergencyMode", "caption": "Emergency Mode"},
-	  { "type": "CheckBox", "name": "ShowValveProtect", "caption": "ValveProtect"},
+	  { "type": "CheckBox", "name": "ShowValveProtect", "caption": "Valve Protect"},
 	  { "type": "CheckBox", "name": "ShowPumpProtect", "caption": "Pump Protect"},
 
 	  { "type": "Label", "label":  "Heizzone 1" },
