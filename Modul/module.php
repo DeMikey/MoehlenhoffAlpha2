@@ -72,7 +72,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		// ExpertCode
         "CODE/EXPERT" => Array("Name" => "Basis Expert Code", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCode"),
         // Programm
-        "PROGRAM/SHIFT_PROGRAM [@nr='1'] [@shiftingtime='1']/START" => Array("Name" => "Basis Program 1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='1'][@shiftingtime='1']/START" => Array("Name" => "Basis Program 1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
         "PROGRAM/SHIFT_PROGRAM [@nr='1'] [@shiftingtime='1']/END" => Array("Name" => "Basis Program 1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
         "PROGRAM/SHIFT_PROGRAM [@nr='2'] [@shiftingtime='1']/START" => Array("Name" => "Basis Program 2-1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
         "PROGRAM/SHIFT_PROGRAM [@nr='2'] [@shiftingtime='1']/END" => Array("Name" => "Basis Program 2-1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
@@ -88,9 +88,9 @@ class MoehlenhoffAlpha2 extends IPSModule
 		//"PUMP_OUTPUT/PUMP_STOPPINGTIME" => Array("Name" => "Pumpen Nachlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.PumpTime", "Action" => true, "Position" => 50),
 		//"RELAIS/RELAIS_LEADTIME" => Array("Name" => "Relais Vorlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.RelaisTime", "Action" => true, "Position" => 50),
 		//"RELAIS/RELAIS_STOPPINGTIME" => Array("Name" => "Relais Nachlaufzeit (Minuten)", "Type" => 1, "Profile" => "MH.RelaisTime", "Action" => true, "Position" => 50),
-		//"EMERGENCYMODE/EMERGENCYMODE_TIME" => Array("Name" => "Notbetrieb Aktivierungszeit (Minuten)", "Type" => 1, "Profile" => "MH.EmergencyTime", "Action" => true, "Position" => 50),
-		//"EMERGENCYMODE/PWMCYCLE" => Array("Name" => "Notbetrieb PWM-Zyklusdauer (Minuten)", "Type" => 1, "Profile" => "MH.PWMCycle", "Action" => true, "Position" => 50),
-		//"EMERGENCYMODE/PWMHEAT" => Array("Name" => "Notbetrieb PWM Heizendauer (Prozent)", "Type" => 1, "Profile" => "MH.PWMPercent", "Action" => true, "Position" => 50),
+		"EMERGENCYMODE/EMERGENCYMODE_TIME" => Array("Name" => "Notbetrieb Aktivierungszeit (Minuten)", "Type" => 1, "Profile" => "MH.EmergencyTime", "Action" => true, "Position" => 50),
+		"EMERGENCYMODE/PWMCYCLE" => Array("Name" => "Notbetrieb PWM-Zyklusdauer (Minuten)", "Type" => 1, "Profile" => "MH.PWMCycle", "Action" => true, "Position" => 50),
+		"EMERGENCYMODE/PWMHEAT" => Array("Name" => "Notbetrieb PWM Heizendauer (Prozent)", "Type" => 1, "Profile" => "MH.PWMPercent", "Action" => true, "Position" => 50),
 		"EMERGENCYMODE/PWMCOOL" => Array("Name" => "Notbetrieb PWM Kühlendauer (Prozent)", "Type" => 1, "Profile" => "MH.PWMPercent", "Action" => true, "Position" => 50)
     );
 
