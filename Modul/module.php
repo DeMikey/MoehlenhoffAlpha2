@@ -72,8 +72,8 @@ class MoehlenhoffAlpha2 extends IPSModule
 		// ExpertCode
         "CODE/EXPERT" => Array("Name" => "Basis Expert Code", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCode"),
         // Programm
-        "PROGRAM/SHIFT_PROGRAM[@nr='1'] shiftingtime=\"1\"/START" => Array("Name" => "Basis Program 1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
-        "PROGRAM/SHIFT_PROGRAM [@nr='1'] [@shiftingtime='1']/END" => Array("Name" => "Basis Program 1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='1'][@shiftingtime='1']/START" => Array("Name" => "Basis Program 1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
+        "PROGRAM/SHIFT_PROGRAM[@nr='1'][@shiftingtime='1']/END" => Array("Name" => "Basis Program 1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
         "PROGRAM/SHIFT_PROGRAM [@nr='2'] [@shiftingtime='1']/START" => Array("Name" => "Basis Program 2-1 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
         "PROGRAM/SHIFT_PROGRAM [@nr='2'] [@shiftingtime='1']/END" => Array("Name" => "Basis Program 2-1 End Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
         "PROGRAM/SHIFT_PROGRAM [@nr='2'] [@shiftingtime='2']/START" => Array("Name" => "Basis Program 2-2 Start Time", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowProgramm"),
@@ -941,7 +941,10 @@ class MoehlenhoffAlpha2 extends IPSModule
 
 	private function ReduceToIdent($ID)
     {
-		return str_replace(Array("[@nr='", "']", "/"), Array("", "", "_"), $ID);
+        $ReplacIdent = str_replace(Array("[@nr='", "']", "/"), Array("", "", "_"), $ID);
+        $ReplacIdent = str_replace(Array("[@shiftingtime='", "']", "/"), Array("", "", "_"), $ReplacIdent);
+        return $ReplacIdent;
+//		return str_replace(Array("[@nr='", "']", "/"), Array("", "", "_"), $ID);
 	}
 
 	private function GetKeyForIdent($Ident) {
