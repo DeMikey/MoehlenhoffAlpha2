@@ -746,7 +746,10 @@ class MoehlenhoffAlpha2 extends IPSModule
 		$this->SetTimerInterval("UpdateTimer", $this->ReadPropertyInteger("Interval")*1000);
 
 		$this->MaintainArray(self::$base);
-		$this->MaintainArray(self::$values);
+		for ($i= 1; $i <= 12; $i++)
+		{
+            $this->MaintainArray( self::$values, $i );
+        }
 		
 	}
 
