@@ -745,7 +745,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 
 		$this->SetTimerInterval("UpdateTimer", $this->ReadPropertyInteger("Interval")*1000);
 
-		$this->MaintainArray(self::$base);
+		$this->MaintainArray(self::$base, null);
 		for ($i= 1; $i <= 12; $i++)
 		{
             $this->MaintainArray( self::$values, $i );
@@ -935,7 +935,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 
 	}
 
-	private function MaintainArray($Array, $HeattNr)
+	private function MaintainArray($Array, $HeatNr)
     {
 		foreach($Array as $key => $value)
 		{
@@ -945,18 +945,18 @@ class MoehlenhoffAlpha2 extends IPSModule
 			}
 			else
 			{
-				$keep = $this->ReadPropertyBoolean(sprintf($value['Keep'], $HeattNr));
+				$keep = $this->ReadPropertyBoolean(sprintf($value['Keep'], $HeatNr));
 			}
-			$this->MaintainVariable($this->ReduceToIdent(sprintf($key, $HeattNr)), sprintf($this->Translate( $value["Name"]), $HeattNr), $value["Type"], $value["Profile"], $value["Position"], $keep);
+			$this->MaintainVariable($this->ReduceToIdent(sprintf($key, $HeatNr)), sprintf($this->Translate( $value["Name"]), $HeatNr), $value["Type"], $value["Profile"], $value["Position"], $keep);
 
 			if ($keep && $value["Action"])
 			{
-				$this->EnableAction($this->ReduceToIdent(sprintf($key, $HeattNr)));
+				$this->EnableAction($this->ReduceToIdent(sprintf($key, $HeatNr)));
 			}
 		}
 	}
 
-	private function SetValuesArray($Array, $Xml, $HeattNr)
+	private function SetValuesArray($Array, $Xml, $HeatNr)
     {
 		foreach($Array as $key => $value)
 		{
@@ -966,12 +966,12 @@ class MoehlenhoffAlpha2 extends IPSModule
 			}
 			else
 			{
-				$keep = $this->ReadPropertyBoolean(sprintf($value['Keep'], $HeattNr));
+				$keep = $this->ReadPropertyBoolean(sprintf($value['Keep'], $HeatNr));
 			}
 			
-			if ($keep && (sizeof($Xml->Device->xpath(sprintf($key, $HeattNr))) != 0))
+			if ($keep && (sizeof($Xml->Device->xpath(sprintf($key, $HeatNr))) != 0))
 			{
-				SetValue($this->GetIDForIdent($this->ReduceToIdent(sprintf($key, $HeattNr))), (string)$Xml->Device->xpath(sprintf($key, $HeattNr))[0]);
+				SetValue($this->GetIDForIdent($this->ReduceToIdent(sprintf($key, $HeatNr))), (string)$Xml->Device->xpath(sprintf($key, $HeatNr))[0]);
 			}
 		}
 	}
