@@ -34,33 +34,33 @@ class MoehlenhoffAlpha2 extends IPSModule
         "ECO_INPUT_STATE" => Array("Name" => "Basis Absenkeingang", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 50),
 		"T_HEAT_VACATION" => Array("Name" => "Basis Urlaub Temperatur Heizen", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 50),
         // Urlaubs Settings
-        "VACATION/VACATION_STATE" => Array("Name" => "Basis Urlaub Status", "Type" => 1, "Profile" => "MH.VacationState", "Action" => true, "Position" => 50, "Keep" => "ShowVacation"),
-        "VACATION/START_DATE" => Array("Name" => "Basis Urlaub Start Datum", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 13, "Keep" => "ShowVacation"),
-        "VACATION/START_TIME" => Array("Name" => "Basis Urlaub Start Zeit", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 12, "Keep" => "ShowVacation"),
-        "VACATION/END_DATE" => Array("Name" => "Basis Urlaub End Datum", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 10, "Keep" => "ShowVacation"),
-        "VACATION/END_TIME" => Array("Name" => "Basis Urlaub End Zeit", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 10, "Keep" => "ShowVacation"),
+        "VACATION/VACATION_STATE" => Array("Name" => "Urlaub Status", "Type" => 1, "Profile" => "MH.VacationState", "Action" => true, "Position" => 50, "Keep" => "ShowVacation"),
+        "VACATION/START_DATE" => Array("Name" => "Urlaub Start Datum", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 13, "Keep" => "ShowVacation"),
+        "VACATION/START_TIME" => Array("Name" => "Urlaub Start Zeit", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 12, "Keep" => "ShowVacation"),
+        "VACATION/END_DATE" => Array("Name" => "Urlaub End Datum", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 10, "Keep" => "ShowVacation"),
+        "VACATION/END_TIME" => Array("Name" => "Urlaub End Zeit", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 10, "Keep" => "ShowVacation"),
         // Network Settings
-        "NETWORK/MAC" => Array("Name" => "Basis Network Mac Address", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowNetwork"),
-        "NETWORK/DHCP" => Array("Name" => "Basis Network DHCP enabled", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
-        "NETWORK/IPV6ACTIVE" => Array("Name" => "Basis Network IP6 active", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
-        "NETWORK/IPV4ACTUAL" => Array("Name" => "Basis Network IP4 active Address", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowNetwork"),
-        "NETWORK/IPV4SET" => Array("Name" => "Basis Network IP4 Address", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
-        "NETWORK/IPV6ACTUAL" => Array("Name" => "Basis Network IP6 active Address", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowNetwork"),
-        "NETWORK/IPV6SET" => Array("Name" => "Basis Network IP6 Address", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
-        "NETWORK/NETMASKACTUAL" => Array("Name" => "Basis Network active Netmask", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowNetwork"),
-        "NETWORK/NETMASKSET" => Array("Name" => "Basis Network Netmask", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
-        "NETWORK/DNS" => Array("Name" => "Basis Network DNS Server", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
-        "NETWORK/GATEWAY" => Array("Name" => "Basis Network Gateway", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/MAC" => Array("Name" => "Network Mac Address", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/DHCP" => Array("Name" => "Network DHCP enabled", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/IPV6ACTIVE" => Array("Name" => "Network IP6 active", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/IPV4ACTUAL" => Array("Name" => "Network IP4 active Address", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/IPV4SET" => Array("Name" => "Network IP4 Address", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/IPV6ACTUAL" => Array("Name" => "Network IP6 active Address", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/IPV6SET" => Array("Name" => "Network IP6 Address", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/NETMASKACTUAL" => Array("Name" => "Network active Netmask", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/NETMASKSET" => Array("Name" => "Network Netmask", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/DNS" => Array("Name" => "Network DNS Server", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
+        "NETWORK/GATEWAY" => Array("Name" => "Network Gateway", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowNetwork"),
 		//Cloud
-        "CLOUD/USERID" => Array("Name" => "Basis Cloud User ID", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 80, "Keep" => "ShowCloud"),
-        "CLOUD/PASSWORD" => Array("Name" => "Basis Cloud Password", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 80, "Keep" => "ShowCloud"),
-        "CLOUD/M2MSERVERPORT" => Array("Name" => "Basis Cloud M2M Server Port", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
-        "CLOUD/M2MLOCALPORT" => Array("Name" => "Basis Cloud M2M local Port", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
-        "CLOUD/M2MHTTPPORT" => Array("Name" => "Basis Cloud M2M HTTP Port", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
-        "CLOUD/M2MHTTPSPORT" => Array("Name" => "Basis Cloud M2m HTTPs Port", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
-        "CLOUD/M2MSERVERADDRESS" => Array("Name" => "Basis Cloud M2M Server Address", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
-        "CLOUD/M2MACTIVE" => Array("Name" => "Basis Cloud M2M active", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
-        "CLOUD/M2MSTATE" => Array("Name" => "Basis Cloud M2M state", "Type" => 0, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowCloud"),
+        "CLOUD/USERID" => Array("Name" => "Cloud User ID", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 80, "Keep" => "ShowCloud"),
+        "CLOUD/PASSWORD" => Array("Name" => "Cloud Password", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 80, "Keep" => "ShowCloud"),
+        "CLOUD/M2MSERVERPORT" => Array("Name" => "Cloud M2M Server Port", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
+        "CLOUD/M2MLOCALPORT" => Array("Name" => "Cloud M2M local Port", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
+        "CLOUD/M2MHTTPPORT" => Array("Name" => "Cloud M2M HTTP Port", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
+        "CLOUD/M2MHTTPSPORT" => Array("Name" => "Cloud M2m HTTPs Port", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
+        "CLOUD/M2MSERVERADDRESS" => Array("Name" => "Cloud M2M Server Address", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
+        "CLOUD/M2MACTIVE" => Array("Name" => "Cloud M2M active", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowCloud"),
+        "CLOUD/M2MSTATE" => Array("Name" => "Cloud M2M state", "Type" => 3, "Profile" => "", "Action" => false, "Position" => 60, "Keep" => "ShowCloud"),
         // KWLCTRL
         "KWLCTRL/KWL_CONTROL_VISIBLE" => Array("Name" => "Basis KWL Control Visible", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowKWLCTRL"),
         "KWLCTRL/KWL_PRESENT" => Array("Name" => "Basis KWL Present", "Type" => 0, "Profile" => "", "Action" => true, "Position" => 60, "Keep" => "ShowKWLCTRL"),
@@ -108,33 +108,42 @@ class MoehlenhoffAlpha2 extends IPSModule
 		"VALVEPROTECT/VALVEPROTECT_TIME" => Array("Name" => "Valve Protected Time (Minute)", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowValveProtect"),
         "VALVEPROTECT/DURATION" => Array("Name" => "Valve Protected Duration (Minute)", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowValveProtect"),
         // PUMPPROTECT
-        "PUMPPROTECT/PUMPPROTECT_TIME" => Array("Name" => "Pump Protected Time (Minute)", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowValveProtect"),
-        "PUMPPROTECT/DURATION" => Array("Name" => "Pump Protected Duration (Minute)", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowValveProtect")
+        "PUMPPROTECT/PUMPPROTECT_TIME" => Array("Name" => "Pump Protected Time (Minute)", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowPumpProtect"),
+        "PUMPPROTECT/DURATION" => Array("Name" => "Pump Protected Duration (Minute)", "Type" => 1, "Profile" => "", "Action" => true, "Position" => 50, "Keep" => "ShowPumpProtect")
     );
 
 	private static $values = Array(
-        "HEATAREA[@nr='1']/HEATAREA_NAME" => Array("Name" => "Heizzone 01 Name", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		"HEATAREA[@nr='1']/HEATAREA_MODE" => Array("Name" => "Heizzone 01 Betriebsmodus", "Type" => 1, "Profile" => "MH.HeatAreaMode", "Action" => true, "Position" => 62, "Keep" => "ShowHeatArea01"),
-		"HEATAREA[@nr='1']/T_ACTUAL" => Array("Name" => "Heizzone 01 Ist Temperatur", "Type" => 2, "Profile" => "MH.HeatAreaTActualTemp", "Action" => false, "Position" => 60, "Keep" => "ShowHeatArea01"),
-		"HEATAREA[@nr='1']/T_ACTUAL_EXT" => Array("Name" => "Heizzone 01 Ist Temperatur Ext. Sensor", "Type" => 2, "Profile" => "MH.HeatAreaTActualTemp", "Action" => false, "Position" => 63, "Keep" => "ShowHeatArea01"),
-		"HEATAREA[@nr='1']/T_TARGET" => Array("Name" => "Heizzone 01 Soll Temperatur", "Type" => 2, "Profile" => "MH.HeatAreaTTarget", "Action" => true, "Position" => 61, "Keep" => "ShowHeatArea01"),
-		"HEATAREA[@nr='1']/HEATAREA_STATE" => Array("Name" => "Heizzone 01 Status", "Type" => 0, "Profile" => "MH.HeatAreaState", "Action" => false, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		"HEATAREA[@nr='1']/PRESENCE" => Array("Name" => "Heizzone 01 Anwesenheit", "Type" => 0, "Profile" => "~Presence", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		"HEATAREA[@nr='1']/T_TARGET_MIN" => Array("Name" => "Heizzone 01 Soll Temperatur Min", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		"HEATAREA[@nr='1']/T_TARGET_MAX" => Array("Name" => "Heizzone 01 Soll Temperatur Max", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		//"HEATAREA[@nr='1']/RPM_MOTOR" => Array("Name" => "Heizzone 01 Drehzahl Lüftmotor", "Type" => 1, "Profile" => "MH.HeatAreaRPMMotor", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		"HEATAREA[@nr='1']/OFFSET" => Array("Name" => "Heizzone 01 Korrektur Ist-Werterfassung", "Type" => 2, "Profile" => "MH.HeatAreaOffset", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		//"HEATAREA[@nr='1']/T_HEAT_DAY" => Array("Name" => "Heizzone 01 Temperatur Heizen Tag", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		//"HEATAREA[@nr='1']/T_HEAT_NIGHT" => Array("Name" => "Heizzone 01 Temperatur Heizen Nacht", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		//"HEATAREA[@nr='1']/T_COOL_DAY" => Array("Name" => "Heizzone 01 Temperatur Kühlen Tag", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		//"HEATAREA[@nr='1']/T_COOL_NIGHT" => Array("Name" => "Heizzone 01 Temperatur Kühlen Nacht", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		//"HEATAREA[@nr='1']/T_FLOOR_DAY" => Array("Name" => "Heizzone 01 Bodentemperatur Tag", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		"HEATAREA[@nr='1']/HEATINGSYSTEM" => Array("Name" => "Heizzone 01 Heizsystem", "Type" => 1, "Profile" => "MH.HeatingSystem", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		//"HEATAREA[@nr='1']/BLOCK_HC" => Array("Name" => "Heizzone 01 Heizen oder Kühlen sperren", "Type" => 1, "Profile" => "MH.HeatAreaBlockHC", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		"HEATAREA[@nr='1']/PROGRAM_WEEK" => Array("Name" => "Heizzone 01 Programm wochentags", "Type" => 1, "Profile" => "MH.HeatAreaProgram", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		"HEATAREA[@nr='1']/PROGRAM_WEEKEND" => Array("Name" => "Heizzone 01 Programm Wochenende", "Type" => 1, "Profile" => "MH.HeatAreaProgram", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		"HEATAREA[@nr='1']/PARTY" => Array("Name" => "Heizzone 01 Partyschaltung (Stunden)", "Type" => 1, "Profile" => "MH.HeatAreaParty", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea01"),
-		"HEATAREA[@nr='1']/PARTY_REMAININGTIME" => Array("Name" => "Heizzone 01 Partyschaltung Restzeit (min)", "Type" => 1, "Profile" => "MH.HeatAreaPartyRemainingTime", "Action" => false, "Position" => 200, "Keep" => "ShowHeatArea01"),
+        "HEATAREA[@nr='%d']/HEATAREA_NAME" => Array("Name" => "Heizzone %'.02d Name", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/HEATAREA_MODE" => Array("Name" => "Heizzone %'.02d Betriebsmodus", "Type" => 1, "Profile" => "MH.HeatAreaMode", "Action" => true, "Position" => 62, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/T_ACTUAL" => Array("Name" => "Heizzone %'.02d Ist Temperatur", "Type" => 2, "Profile" => "MH.HeatAreaTActualTemp", "Action" => false, "Position" => 60, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/T_ACTUAL_EXT" => Array("Name" => "Heizzone %'.02d Ist Temperatur Ext. Sensor", "Type" => 2, "Profile" => "MH.HeatAreaTActualTemp", "Action" => false, "Position" => 63, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/T_TARGET" => Array("Name" => "Heizzone %'.02d Soll Temperatur", "Type" => 2, "Profile" => "MH.HeatAreaTTarget", "Action" => true, "Position" => 61, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/HEATAREA_STATE" => Array("Name" => "Heizzone %'.02d Status", "Type" => 0, "Profile" => "MH.HeatAreaState", "Action" => false, "Position" => 200, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/PRESENCE" => Array("Name" => "Heizzone %'.02d Anwesenheit", "Type" => 0, "Profile" => "~Presence", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/T_TARGET_MIN" => Array("Name" => "Heizzone %'.02d Soll Temperatur Min", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/T_TARGET_MAX" => Array("Name" => "Heizzone %'.02d Soll Temperatur Max", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/OFFSET" => Array("Name" => "Heizzone %'.02d Korrektur Ist-Werterfassung", "Type" => 2, "Profile" => "MH.HeatAreaOffset", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/T_HEAT_DAY" => Array("Name" => "Heizzone %'.02d Temperatur Heizen Tag", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/T_HEAT_NIGHT" => Array("Name" => "Heizzone %'.02d Temperatur Heizen Nacht", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02d"),
+        "HEATAREA[@nr='%d']/BLOCK_HC" => Array("Name" => "Heizzone %'.02d Heizen oder Kühlen sperren", "Type" => 1, "Profile" => "MH.HeatAreaBlockHC", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02d"),
+        // Lüftermotor
+        "HEATAREA[@nr='%d']/RPM_MOTOR" => Array("Name" => "Heizzone %'.02d Drehzahl Lüftmotor", "Type" => 1, "Profile" => "MH.HeatAreaRPMMotor", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02dMotor"),
+        // Kühlen
+		"HEATAREA[@nr='%d']/T_COOL_DAY" => Array("Name" => "Heizzone %'.02d Temperatur Kühlen Tag", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02dCooling"),
+		"HEATAREA[@nr='%d']/T_COOL_NIGHT" => Array("Name" => "Heizzone %'.02d Temperatur Kühlen Nacht", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02dCooling"),
+		// Boden Temperatur
+        "HEATAREA[@nr='%d']/T_FLOOR_DAY" => Array("Name" => "Heizzone %'.02d Bodentemperatur Tag", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02dFloorTemp"),
+		// Heizsystem
+        "HEATAREA[@nr='%d']/HEATINGSYSTEM" => Array("Name" => "Heizzone %'.02d Heizsystem", "Type" => 1, "Profile" => "MH.HeatingSystem", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02dSystem"),
+		// Programm
+		"HEATAREA[@nr='%d']/PROGRAM_WEEK" => Array("Name" => "Heizzone %'.02d Programm wochentags", "Type" => 1, "Profile" => "MH.HeatAreaProgram", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02dProgram"),
+		"HEATAREA[@nr='%d']/PROGRAM_WEEKEND" => Array("Name" => "Heizzone %'.02d Programm Wochenende", "Type" => 1, "Profile" => "MH.HeatAreaProgram", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02dProgram"),
+        // Party
+		"HEATAREA[@nr='%d']/PARTY" => Array("Name" => "Heizzone %'.02d Partyschaltung (Stunden)", "Type" => 1, "Profile" => "MH.HeatAreaParty", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02dParty"),
+		"HEATAREA[@nr='%d']/PARTY_REMAININGTIME" => Array("Name" => "Heizzone %'.02d Partyschaltung Restzeit (min)", "Type" => 1, "Profile" => "MH.HeatAreaPartyRemainingTime", "Action" => false, "Position" => 200, "Keep" => "ShowHeatArea%'.02dParty")
+    );
+	private static $Oldvalues = Array(
+
 		"HEATAREA[@nr='2']/HEATAREA_NAME" => Array("Name" => "Heizzone 02 Name", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea02"),
 		"HEATAREA[@nr='2']/HEATAREA_MODE" => Array("Name" => "Heizzone 02 Betriebsmodus", "Type" => 1, "Profile" => "MH.HeatAreaMode", "Action" => true, "Position" => 72, "Keep" => "ShowHeatArea02"),
 		"HEATAREA[@nr='2']/T_ACTUAL" => Array("Name" => "Heizzone 02 Ist Temperatur", "Type" => 2, "Profile" => "MH.HeatAreaTActualTemp", "Action" => false, "Position" => 70, "Keep" => "ShowHeatArea02"),
@@ -525,6 +534,13 @@ class MoehlenhoffAlpha2 extends IPSModule
         $this->RegisterPropertyBoolean("ShowPumpProtect", false);
 
         $this->RegisterPropertyBoolean("ShowHeatArea01", true);
+        $this->RegisterPropertyBoolean("ShowHeatArea01Motor", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea01Cooling", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea01FloorTemp", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea01System", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea01Program", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea01Party", false);
+
 		$this->RegisterPropertyBoolean("ShowHeatArea02", false);
 		$this->RegisterPropertyBoolean("ShowHeatArea03", false);
 		$this->RegisterPropertyBoolean("ShowHeatArea04", false);
@@ -916,7 +932,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 
 	}
 
-	private function MaintainArray($Array)
+	private function MaintainArray($Array, $HeattNr)
     {
 		foreach($Array as $key => $value)
 		{
@@ -926,18 +942,18 @@ class MoehlenhoffAlpha2 extends IPSModule
 			}
 			else
 			{
-				$keep = $this->ReadPropertyBoolean($value["Keep"]);
+				$keep = $this->ReadPropertyBoolean(sprintf($value['Keep'], $HeattNr));
 			}
-			$this->MaintainVariable($this->ReduceToIdent($key), $this->Translate( $value["Name"]), $value["Type"], $value["Profile"], $value["Position"], $keep);
+			$this->MaintainVariable($this->ReduceToIdent(sprintf($key, $HeattNr)), sprintf($this->Translate( $value["Name"]), $HeattNr), $value["Type"], $value["Profile"], $value["Position"], $keep);
 
 			if ($keep && $value["Action"])
 			{
-				$this->EnableAction($this->ReduceToIdent($key));
+				$this->EnableAction($this->ReduceToIdent(sprintf($key, $HeattNr)));
 			}
 		}
 	}
 
-	private function SetValuesArray($Array, $Xml)
+	private function SetValuesArray($Array, $Xml, $HeattNr)
     {
 		foreach($Array as $key => $value)
 		{
@@ -947,12 +963,12 @@ class MoehlenhoffAlpha2 extends IPSModule
 			}
 			else
 			{
-				$keep = $this->ReadPropertyBoolean($value["Keep"]);
+				$keep = $this->ReadPropertyBoolean(sprintf($value['Keep'], $HeattNr));
 			}
 			
-			if ($keep && (sizeof($Xml->Device->xpath($key)) != 0))
+			if ($keep && (sizeof($Xml->Device->xpath(sprintf($key, $HeattNr))) != 0))
 			{
-				SetValue($this->GetIDForIdent($this->ReduceToIdent($key)), (string)$Xml->Device->xpath($key)[0]);
+				SetValue($this->GetIDForIdent($this->ReduceToIdent(sprintf($key, $HeattNr)), (string)$Xml->Device->xpath(sprintf($key, $HeattNr))[0]);
 			}
 		}
 	}
