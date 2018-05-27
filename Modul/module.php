@@ -968,7 +968,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 			
 			if ($keep && (sizeof($Xml->Device->xpath(sprintf($key, $HeattNr))) != 0))
 			{
-				SetValue($this->GetIDForIdent($this->ReduceToIdent(sprintf($key, $HeattNr)), (string)$Xml->Device->xpath(sprintf($key, $HeattNr))[0]);
+				SetValue($this->GetIDForIdent($this->ReduceToIdent(sprintf($key, $HeattNr))), (string)$Xml->Device->xpath(sprintf($key, $HeattNr))[0]);
 			}
 		}
 	}
