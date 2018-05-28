@@ -28,6 +28,14 @@
 	  { "type": "CheckBox", "name": "ShowHeatArea01Party", "caption": "Heizzone 1 Party" },
 
 	{ "type": "CheckBox", "name": "ShowHeatArea02", "caption": "Heizzone 2" },
+	  { "type": "CheckBox", "name": "ShowHeatArea02", "caption": "Heizzone 2" },
+	  { "type": "CheckBox", "name": "ShowHeatArea02Motor", "caption": "Heizzone 2 Lüftermotor" },
+	  { "type": "CheckBox", "name": "ShowHeatArea02Cooling", "caption": "Heizzone 2 Kühlen" },
+	  { "type": "CheckBox", "name": "ShowHeatArea02FloorTemp", "caption": "Heizzone 2 Boden Temperatur" },
+	  { "type": "CheckBox", "name": "ShowHeatArea02System", "caption": "Heizzone 2 Heizsystem" },
+	  { "type": "CheckBox", "name": "ShowHeatArea02Program", "caption": "Heizzone 2 Programm" },
+	  { "type": "CheckBox", "name": "ShowHeatArea02Party", "caption": "Heizzone 2 Party" },
+
 	{ "type": "CheckBox", "name": "ShowHeatArea03", "caption": "Heizzone 3" },
 	{ "type": "CheckBox", "name": "ShowHeatArea04", "caption": "Heizzone 4" },
 	{ "type": "CheckBox", "name": "ShowHeatArea05", "caption": "Heizzone 5" },

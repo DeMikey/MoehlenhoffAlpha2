@@ -542,6 +542,14 @@ class MoehlenhoffAlpha2 extends IPSModule
         $this->RegisterPropertyBoolean("ShowHeatArea01Party", false);
 
 		$this->RegisterPropertyBoolean("ShowHeatArea02", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea02", true);
+        $this->RegisterPropertyBoolean("ShowHeatArea02Motor", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea02Cooling", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea02FloorTemp", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea02System", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea02Program", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea02Party", false);
+
 		$this->RegisterPropertyBoolean("ShowHeatArea03", false);
 		$this->RegisterPropertyBoolean("ShowHeatArea04", false);
 		$this->RegisterPropertyBoolean("ShowHeatArea05", false);
@@ -745,8 +753,9 @@ class MoehlenhoffAlpha2 extends IPSModule
 
 		$this->SetTimerInterval("UpdateTimer", $this->ReadPropertyInteger("Interval")*1000);
 
-		$this->MaintainArray(self::$base, null);
-		for ($i= 1; $i <= 12; $i++)
+		$this->MaintainArray(self::$base);
+		//******* ACHTUNG hier auf 12 erhöhen
+		for ($i= 1; $i <= 2; $i++)
 		{
             $this->MaintainArray( self::$values, $i );
         }
@@ -920,7 +929,10 @@ class MoehlenhoffAlpha2 extends IPSModule
 			return;
 		}
 		$this->SetValuesArray(self::$base, $xml);
-		$this->SetValuesArray(self::$values, $xml);
+		for ($i=1; $i <= 2; $i++)
+		{
+            $this->SetValuesArray( self::$values, $xml );
+        }
 		
 		if (GetValue($this->GetIDForIdent($this->ReduceToIdent("VERS_SW_STM"))) >= "02.02")
 		{
