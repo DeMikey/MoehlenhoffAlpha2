@@ -542,7 +542,6 @@ class MoehlenhoffAlpha2 extends IPSModule
         $this->RegisterPropertyBoolean("ShowHeatArea01Party", false);
 
 		$this->RegisterPropertyBoolean("ShowHeatArea02", false);
-        $this->RegisterPropertyBoolean("ShowHeatArea02", true);
         $this->RegisterPropertyBoolean("ShowHeatArea02Motor", false);
         $this->RegisterPropertyBoolean("ShowHeatArea02Cooling", false);
         $this->RegisterPropertyBoolean("ShowHeatArea02FloorTemp", false);
