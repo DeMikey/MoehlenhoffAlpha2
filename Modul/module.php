@@ -935,7 +935,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 
 	}
 
-	private function MaintainArray($Array, $HeatNr)
+	private function MaintainArray($Array, $HeatNr = null)
     {
 		foreach($Array as $key => $value)
 		{
@@ -956,7 +956,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		}
 	}
 
-	private function SetValuesArray($Array, $Xml, $HeatNr)
+	private function SetValuesArray($Array, $Xml, $HeatNr = null)
     {
 		foreach($Array as $key => $value)
 		{
