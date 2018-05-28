@@ -27,7 +27,7 @@
 	  { "type": "CheckBox", "name": "ShowHeatArea01Program", "caption": "Heizzone 1 Programm" },
 	  { "type": "CheckBox", "name": "ShowHeatArea01Party", "caption": "Heizzone 1 Party" },
 
-	{ "type": "CheckBox", "name": "ShowHeatArea02", "caption": "Heizzone 2" },
+	  { "type": "Label", "label":  "Heizzone 2" },
 	  { "type": "CheckBox", "name": "ShowHeatArea02", "caption": "Heizzone 2" },
 	  { "type": "CheckBox", "name": "ShowHeatArea02Motor", "caption": "Heizzone 2 Lüftermotor" },
 	  { "type": "CheckBox", "name": "ShowHeatArea02Cooling", "caption": "Heizzone 2 Kühlen" },
