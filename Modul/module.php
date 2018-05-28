@@ -930,7 +930,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		$this->SetValuesArray(self::$base, $xml);
 		for ($i=1; $i <= 2; $i++)
 		{
-            $this->SetValuesArray( self::$values, $xml );
+            $this->SetValuesArray( self::$values, $xml, $i );
         }
 		
 		if (GetValue($this->GetIDForIdent($this->ReduceToIdent("VERS_SW_STM"))) >= "02.02")
