@@ -449,11 +449,14 @@ class MoehlenhoffAlpha2 extends IPSModule
 	);
 
 	private static $valuesHeatCtrlExt = Array(
-		"HEATCTRL[@nr='1']/INUSE" => Array("Name" => "Heizkreis 01 Aktiv", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 250),
-		"HEATCTRL[@nr='1']/ACTOR" => Array("Name" => "Heizkreis 01 Aktor", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 250),
-		"HEATCTRL[@nr='1']/ACTOR_PERCENT" => Array("Name" => "Heizkreis 01 Aktor Prozent", "Type" => 1, "Profile" => "MH.HeatCtrlActorPercent", "Action" => false, "Position" => 250),
-		"HEATCTRL[@nr='1']/HEATAREA_NR" => Array("Name" => "Heizkreis 01 zugewiesene Heizzone", "Type" => 1, "Profile" => "MH.HeatAreaNr", "Action" => false, "Position" => 250),
-		"HEATCTRL[@nr='1']/HEATCTRL_STATE" => Array("Name" => "Heizkreis 01 Status", "Type" => 1, "Profile" => "MH.HeatAreaHeatCTRLState", "Action" => false, "Position" => 250),
+		"HEATCTRL[@nr='%d']/INUSE" => Array("Name" => "Heizkreis %'.02d Aktiv", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 250, "Keep" => "ShowHeatCtrl%'.02d"),
+		"HEATCTRL[@nr='%d']/ACTOR" => Array("Name" => "Heizkreis %'.02d Aktor", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 250, "Keep" => "ShowHeatCtrl%'.02d"),
+		"HEATCTRL[@nr='%d']/ACTOR_PERCENT" => Array("Name" => "Heizkreis %'.02d Aktor Prozent", "Type" => 1, "Profile" => "MH.HeatCtrlActorPercent", "Action" => false, "Position" => 250, "Keep" => "ShowHeatCtrl%'.02d"),
+		"HEATCTRL[@nr='%d']/HEATAREA_NR" => Array("Name" => "Heizkreis %'.02d zugewiesene Heizzone", "Type" => 1, "Profile" => "MH.HeatAreaNr", "Action" => false, "Position" => 250, "Keep" => "ShowHeatCtrl%'.02d"),
+		"HEATCTRL[@nr='%d']/HEATCTRL_STATE" => Array("Name" => "Heizkreis %'.02d Status", "Type" => 1, "Profile" => "MH.HeatAreaHeatCTRLState", "Action" => false, "Position" => 250, "Keep" => "ShowHeatCtrl%'.02d")
+    );
+
+	private static $valuesHeatCtrlExtold  = Array(
 		"HEATCTRL[@nr='2']/INUSE" => Array("Name" => "Heizkreis 02 Aktiv", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 250),
 		"HEATCTRL[@nr='2']/ACTOR" => Array("Name" => "Heizkreis 02 Aktor", "Type" => 0, "Profile" => "~Switch", "Action" => false, "Position" => 250),
 		"HEATCTRL[@nr='2']/ACTOR_PERCENT" => Array("Name" => "Heizkreis 02 Aktor Prozent", "Type" => 1, "Profile" => "MH.HeatCtrlActorPercent", "Action" => false, "Position" => 250),
@@ -550,15 +553,84 @@ class MoehlenhoffAlpha2 extends IPSModule
         $this->RegisterPropertyBoolean("ShowHeatArea02Party", false);
 
 		$this->RegisterPropertyBoolean("ShowHeatArea03", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea03Motor", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea03Cooling", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea03FloorTemp", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea03System", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea03Program", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea03Party", false);
+
 		$this->RegisterPropertyBoolean("ShowHeatArea04", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea04Motor", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea04Cooling", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea04FloorTemp", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea04System", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea04Program", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea04Party", false);
+
 		$this->RegisterPropertyBoolean("ShowHeatArea05", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea05Motor", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea05Cooling", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea05FloorTemp", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea05System", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea05Program", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea05Party", false);
+
 		$this->RegisterPropertyBoolean("ShowHeatArea06", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea06Motor", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea06Cooling", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea06FloorTemp", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea06System", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea06Program", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea06Party", false);
+
 		$this->RegisterPropertyBoolean("ShowHeatArea07", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea07Motor", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea07Cooling", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea07FloorTemp", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea07System", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea07Program", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea07Party", false);
+
 		$this->RegisterPropertyBoolean("ShowHeatArea08", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea08Motor", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea08Cooling", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea08FloorTemp", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea08System", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea08Program", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea08Party", false);
+
 		$this->RegisterPropertyBoolean("ShowHeatArea09", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea09Motor", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea09Cooling", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea09FloorTemp", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea09System", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea09Program", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea09Party", false);
+
 		$this->RegisterPropertyBoolean("ShowHeatArea10", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea10Motor", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea10Cooling", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea10FloorTemp", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea10System", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea10Program", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea10Party", false);
+
 		$this->RegisterPropertyBoolean("ShowHeatArea11", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea11Motor", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea11Cooling", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea11FloorTemp", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea11System", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea11Program", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea11Party", false);
+
 		$this->RegisterPropertyBoolean("ShowHeatArea12", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea12Motor", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea12Cooling", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea12FloorTemp", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea12System", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea12Program", false);
+        $this->RegisterPropertyBoolean("ShowHeatArea12Party", false);
 
 		//Timer
 		$this->RegisterTimer("UpdateTimer", 0, 'MAlpha2_RequestStatus($_IPS[\'TARGET\']);');
@@ -753,8 +825,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		$this->SetTimerInterval("UpdateTimer", $this->ReadPropertyInteger("Interval")*1000);
 
 		$this->MaintainArray(self::$base);
-		//******* ACHTUNG hier auf 12 erhöhen
-		for ($i= 1; $i <= 2; $i++)
+		for ($i= 1; $i <= 12; $i++)
 		{
             $this->MaintainArray( self::$values, $i );
         }
@@ -928,15 +999,21 @@ class MoehlenhoffAlpha2 extends IPSModule
 			return;
 		}
 		$this->SetValuesArray(self::$base, $xml);
-		for ($i=1; $i <= 2; $i++)
+		for ($i=1; $i <= 12; $i++)
 		{
             $this->SetValuesArray( self::$values, $xml, $i );
         }
 		
 		if (GetValue($this->GetIDForIdent($this->ReduceToIdent("VERS_SW_STM"))) >= "02.02")
 		{
-			$this->MaintainArray(self::$valuesHeatCtrlExt);
-			$this->SetValuesArray(self::$valuesHeatCtrlExt, $xml);
+		    for ($i=1; $i <= 12; $i++)
+		    {
+		        if ($xml->Device->{'HEATCTRL nr="' . $i .'"'}->INUSE == 1)
+		        {
+                    $this->MaintainArray( self::$valuesHeatCtrlExt, $i );
+                    $this->SetValuesArray( self::$valuesHeatCtrlExt, $xml, $i );
+                }
+            }
 		}
 		else
 		{
