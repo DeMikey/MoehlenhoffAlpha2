@@ -1008,9 +1008,8 @@ class MoehlenhoffAlpha2 extends IPSModule
 		{
 		    for ($i=1; $i <= 12; $i++)
 		    {
-                $this->SendDebug("Mikeysoft", "Dies sind die Daten", 0);
-                $this->SendDebug("Heiz Control: ",  print_r($xml->Device->{'HEATCTRL nr="' . $i .'"'}->INUSE, true), 0);
-		        if ($xml->Device->{'HEATCTRL nr="' . $i .'"'}->INUSE == 1)
+                $this->SendDebug("Heiz Control: ",  (string) $xml->Device->{'HEATCTRL nr="' . $i .'"'}->INUSE, 0);
+		        if ((integer)$xml->Device->{'HEATCTRL nr="' . $i .'"'}->INUSE == 1)
 		        {
                     $this->MaintainArray( self::$valuesHeatCtrlExt, $i );
                     $this->SetValuesArray( self::$valuesHeatCtrlExt, $xml, $i );
