@@ -1010,7 +1010,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		    {
                 $this->SendDebug("Heiz Control: ",  'Device/HEATCTRL nr="' . $i . '"/INUSE', 0);
                 $this->SendDebug("Heiz Control: ",  (string)$xml->Device->{'HEATCTRL nr="1"'}->INUSE, 0);
-                $this->SendDebug("Heiz Control: ",  (string)$xml->Device->xpath('HEATCTRL[@nr=\'2\']/INUSE')[0], 0);
+                $this->SendDebug("Heiz Control: ",  (string)$xml->Device->xpath('HEATCTRL[@nr=\''.$i.'\']/INUSE')[0], 0);
                 $this->SendDebug("Heiz Control: ",  (string)$xml->Device->xpath('HEATCTRL nr="' . $i . '"/INUSE')[0], 0);
 		        if ((integer)$xml->Device->{'HEATCTRL nr="' . $i .'"'}->INUSE == 1)
 		        {
