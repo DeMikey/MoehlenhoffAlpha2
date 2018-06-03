@@ -67,6 +67,27 @@
 			"Kühlen sperren": "Kühlen sperren",
 			"Heizen sperren": "Heizen sperren",
 			"Normal": "Normal"
+			"Heatarea 1": "Heizzone 1",
+			"Heatarea 2": "Heizzone 2",
+			"Heatarea 3": "Heizzone 3",
+			"Heatarea 4": "Heizzone 4",
+			"Heatarea 5": "Heizzone 5",
+			"Heatarea 6": "Heizzone 6",
+			"Heatarea 7": "Heizzone 7",
+			"Heatarea 8": "Heizzone 8",
+			"Heatarea 9": "Heizzone 9",
+			"Heatarea 10": "Heizzone 10",
+			"Heatarea 11": "Heizzone 11",
+			"Heatarea 12": "Heizzone 12",
+			"Heatarea": "Heizzone",
+			"Heatctrl": "Heizkreis",
+			"I/O Device": "I/O Geräte",
+			"Lüftermotor": "Lüftermotor",
+			"Cooling": "Kühlen",
+			"Floor Temperatur": "Boden Temperatur",
+			"Heatsystem": "Heizsystem",
+			"Programs": "Programme",
+			"Party": "Party"
 		}
 	}
 }
