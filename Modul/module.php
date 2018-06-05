@@ -114,17 +114,17 @@ class MoehlenhoffAlpha2 extends IPSModule
 
 	private static $values = Array(
         "HEATAREA[@nr='%d']/HEATAREA_NAME" => Array("Name" => "Heizzone %'.02d Name", "Type" => 3, "Profile" => "", "Action" => true, "Position" => 1, "Keep" => "ShowHeatArea%'.02d"),
-		"HEATAREA[@nr='%d']/HEATAREA_MODE" => Array("Name" => "Heizzone %'.02d Betriebsmodus", "Type" => 1, "Profile" => "MH.HeatAreaMode", "Action" => true, "Position" => 2, "Keep" => "ShowHeatArea%'.02d"),
-		"HEATAREA[@nr='%d']/T_ACTUAL" => Array("Name" => "Heizzone %'.02d Ist Temperatur", "Type" => 2, "Profile" => "MH.HeatAreaTActualTemp", "Action" => false, "Position" => 3, "Keep" => "ShowHeatArea%'.02d"),
-		"HEATAREA[@nr='%d']/T_ACTUAL_EXT" => Array("Name" => "Heizzone %'.02d Ist Temperatur Ext. Sensor", "Type" => 2, "Profile" => "MH.HeatAreaTActualTemp", "Action" => false, "Position" => 4, "Keep" => "ShowHeatArea%'.02d"),
-		"HEATAREA[@nr='%d']/T_TARGET" => Array("Name" => "Heizzone %'.02d Soll Temperatur", "Type" => 2, "Profile" => "MH.HeatAreaTTarget", "Action" => true, "Position" => 5, "Keep" => "ShowHeatArea%'.02d"),
-		"HEATAREA[@nr='%d']/HEATAREA_STATE" => Array("Name" => "Heizzone %'.02d Status", "Type" => 0, "Profile" => "MH.HeatAreaState", "Action" => false, "Position" => 10, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/HEATAREA_MODE" => Array("Name" => "Heizzone %'.02d Betriebsmodus", "Type" => 1, "Profile" => "MH.HeatAreaMode", "Action" => true, "Position" => 3, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/T_ACTUAL" => Array("Name" => "Heizzone %'.02d Ist Temperatur", "Type" => 2, "Profile" => "MH.HeatAreaTActualTemp", "Action" => false, "Position" => 4, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/T_ACTUAL_EXT" => Array("Name" => "Heizzone %'.02d Ist Temperatur Ext. Sensor", "Type" => 2, "Profile" => "MH.HeatAreaTActualTemp", "Action" => false, "Position" => 5, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/T_TARGET" => Array("Name" => "Heizzone %'.02d Soll Temperatur", "Type" => 2, "Profile" => "MH.HeatAreaTTarget", "Action" => true, "Position" => 6, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/HEATAREA_STATE" => Array("Name" => "Heizzone %'.02d Status", "Type" => 0, "Profile" => "MH.HeatAreaState", "Action" => false, "Position" => 2, "Keep" => "ShowHeatArea%'.02d"),
 		"HEATAREA[@nr='%d']/PRESENCE" => Array("Name" => "Heizzone %'.02d Anwesenheit", "Type" => 0, "Profile" => "~Presence", "Action" => true, "Position" => 11, "Keep" => "ShowHeatArea%'.02d"),
-		"HEATAREA[@nr='%d']/T_TARGET_MIN" => Array("Name" => "Heizzone %'.02d Soll Temperatur Min", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 8, "Keep" => "ShowHeatArea%'.02d"),
-		"HEATAREA[@nr='%d']/T_TARGET_MAX" => Array("Name" => "Heizzone %'.02d Soll Temperatur Max", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 9, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/T_TARGET_MIN" => Array("Name" => "Heizzone %'.02d Soll Temperatur Min", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 9, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/T_TARGET_MAX" => Array("Name" => "Heizzone %'.02d Soll Temperatur Max", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 10, "Keep" => "ShowHeatArea%'.02d"),
 		"HEATAREA[@nr='%d']/OFFSET" => Array("Name" => "Heizzone %'.02d Korrektur Ist-Werterfassung", "Type" => 2, "Profile" => "MH.HeatAreaOffset", "Action" => true, "Position" => 12, "Keep" => "ShowHeatArea%'.02d"),
-		"HEATAREA[@nr='%d']/T_HEAT_DAY" => Array("Name" => "Heizzone %'.02d Temperatur Heizen Tag", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 6, "Keep" => "ShowHeatArea%'.02d"),
-		"HEATAREA[@nr='%d']/T_HEAT_NIGHT" => Array("Name" => "Heizzone %'.02d Temperatur Heizen Nacht", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 7, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/T_HEAT_DAY" => Array("Name" => "Heizzone %'.02d Temperatur Heizen Tag", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 7, "Keep" => "ShowHeatArea%'.02d"),
+		"HEATAREA[@nr='%d']/T_HEAT_NIGHT" => Array("Name" => "Heizzone %'.02d Temperatur Heizen Nacht", "Type" => 2, "Profile" => "MH.HeatAreaTHeatCool", "Action" => true, "Position" => 8, "Keep" => "ShowHeatArea%'.02d"),
         "HEATAREA[@nr='%d']/BLOCK_HC" => Array("Name" => "Heizzone %'.02d Heizen oder Kühlen sperren", "Type" => 1, "Profile" => "MH.HeatAreaBlockHC", "Action" => true, "Position" => 13, "Keep" => "ShowHeatArea%'.02d"),
         // Lüftermotor
         "HEATAREA[@nr='%d']/RPM_MOTOR" => Array("Name" => "Heizzone %'.02d Drehzahl Lüftmotor", "Type" => 1, "Profile" => "MH.HeatAreaRPMMotor", "Action" => true, "Position" => 200, "Keep" => "ShowHeatArea%'.02dMotor"),
@@ -827,13 +827,14 @@ class MoehlenhoffAlpha2 extends IPSModule
             1, 100, 1, 0,1);
 	}
 
-	public function Destroy(){
+	public function Destroy()
+    {
 		//Never delete this line!
 		parent::Destroy();
-
 	}
 
-	public function ApplyChanges(){
+	public function ApplyChanges()
+    {
 		//Never delete this line!
 		parent::ApplyChanges();
 
@@ -842,9 +843,8 @@ class MoehlenhoffAlpha2 extends IPSModule
 		$this->MaintainArray(self::$base);
 		for ($i= 1; $i <= 12; $i++)
 		{
-            $this->MaintainArray( self::$values, $i, ($i * 100) );
+            $this->MaintainArray (self::$values, $i, $i);
         }
-		
 	}
 
     /**
@@ -1024,11 +1024,11 @@ class MoehlenhoffAlpha2 extends IPSModule
 		    for ($i=1; $i <= 12; $i++)
 		    {
                 $this->SendDebug("HEATCTRL " . $i, "Is in use: " . (string)$xml->Device->xpath('HEATCTRL[@nr=\'' . $i . '\']/INUSE')[0], 0);
-                $Position = (integer)$xml->Device->xpath('HEATCTRL[@nr=\'' . $i . '\']/HEATAREA_NR')[0];
-                $this->SendDebug("HEATCTRL " . $i, "HeatArea: " . $Position, 0);
+                $HeatArea = (integer)$xml->Device->xpath('HEATCTRL[@nr=\'' . $i . '\']/HEATAREA_NR')[0];
+                $this->SendDebug("HEATCTRL " . $i, "HeatArea: " . $HeatArea, 0);
 		        if ((boolean)$xml->Device->xpath('HEATCTRL[@nr=\''.$i.'\']/INUSE')[0])
 		        {
-                    $this->MaintainArray( self::$valuesHeatCtrlExt, $i );
+                    $this->MaintainArray( self::$valuesHeatCtrlExt, $i, $HeatArea );
                     $this->SetValuesArray( self::$valuesHeatCtrlExt, $xml, $i );
                 }
             }
@@ -1037,10 +1037,12 @@ class MoehlenhoffAlpha2 extends IPSModule
 		{
             for ($i=1; $i <= 12; $i++)
             {
-                $this->SendDebug( "HEATCTRL " . $i, "Is in use: " . (string)$xml->Device->xpath( 'HEATCTRL[@nr=\'' . $i . '\']/INUSE' )[0], 0 );
+                $this->SendDebug("HEATCTRL " . $i, "Is in use: " . (string)$xml->Device->xpath( 'HEATCTRL[@nr=\'' . $i . '\']/INUSE' )[0], 0 );
+                $HeatArea = (integer)$xml->Device->xpath('HEATCTRL[@nr=\'' . $i . '\']/HEATAREA_NR')[0];
+                $this->SendDebug("HEATCTRL " . $i, "HeatArea: " . $HeatArea, 0);
                 if ((boolean)$xml->Device->xpath( 'HEATCTRL[@nr=\'' . $i . '\']/INUSE' )[0])
                 {
-                    $this->MaintainArray( self::$valuesHeatCtrl, $i );
+                    $this->MaintainArray( self::$valuesHeatCtrl, $i, $HeatArea );
                     $this->SetValuesArray( self::$valuesHeatCtrl, $xml, $i );
                 }
             }
@@ -1048,8 +1050,16 @@ class MoehlenhoffAlpha2 extends IPSModule
 
 	}
 
-	private function MaintainArray($Array, $HeatNr = null, $Position = 0)
+	private function MaintainArray($Array, $HeatNr = null, $HeatArea = null)
     {
+        if ($HeatArea != null)
+        {
+            $Position = $HeatArea * 100;
+        }
+        else
+        {
+            $Position = 0;
+        }
 		foreach($Array as $key => $value)
 		{
 			if(!isset($value["Keep"]))
@@ -1058,7 +1068,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 			}
 			else
 			{
-				$keep = $this->ReadPropertyBoolean(sprintf($value['Keep'], $HeatNr));
+				$keep = $this->ReadPropertyBoolean(sprintf($value['Keep'], $HeatArea));
 			}
 			$this->MaintainVariable($this->ReduceToIdent(sprintf($key, $HeatNr)), sprintf($this->Translate( $value["Name"]), $HeatNr), $value["Type"], $value["Profile"], ($value["Position"] + $Position), $keep);
 
