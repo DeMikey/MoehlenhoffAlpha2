@@ -688,7 +688,7 @@ class MoehlenhoffAlpha2 extends IPSModule
                     $this->SetValuesArray( self::$valuesHeatCtrlExt, $xml, $i );
                 }
             }
-            $this->SendDebug("IO Device ", $xml->Device->IODEVICE.count(), 0);
+            $this->SendDebug("IO Device ", (integer) $xml->Device->IODEVICE.count(), 0);
 		}
 		else
 		{
