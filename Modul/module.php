@@ -692,9 +692,9 @@ class MoehlenhoffAlpha2 extends IPSModule
 		    {
                 $this->SendDebug("HEATCTRL " . $i, "Is in use: " . (string)$xml->Device->xpath('HEATCTRL[@nr=\'' . $i . '\']/INUSE')[0], 0);
                 $HeatArea = (integer)$xml->Device->xpath('HEATCTRL[@nr=\'' . $i . '\']/HEATAREA_NR')[0];
-                $this->SendDebug("HEATCTRL " . $i, "HeatArea: " . $HeatArea, 0);
-		        if ((boolean)$xml->Device->xpath('HEATCTRL[@nr=\''.$i.'\']/INUSE')[0])
+ 		        if ((boolean)$xml->Device->xpath('HEATCTRL[@nr=\''.$i.'\']/INUSE')[0])
 		        {
+                    $this->SendDebug("HEATCTRL " . $i, "HeatArea: " . $HeatArea, 0);
                     $this->MaintainArray( self::$valuesHeatCtrlExt, $i, $HeatArea );
                     $this->SetValuesArray( self::$valuesHeatCtrlExt, $xml, $i );
                 }
