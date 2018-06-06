@@ -148,7 +148,7 @@
 		{ "type": "CheckBox", "name": "ShowHeatArea10FloorTemp", "caption": "Boden Temperatur" },
 		{ "type": "CheckBox", "name": "ShowHeatArea10System", "caption": "Heizsystem" },
 		{ "type": "CheckBox", "name": "ShowHeatArea10Program", "caption": "Programm" },
-		{ "type": "CheckBox", "name": "ShowHeatArea10Party", "caption": "Party" },
+		{ "type": "CheckBox", "name": "ShowHeatArea10Party", "caption": "Party" }
   ],
   "actions":
   [
