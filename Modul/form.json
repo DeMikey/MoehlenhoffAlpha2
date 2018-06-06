@@ -140,15 +140,15 @@
 		{ "type": "CheckBox", "name": "ShowHeatArea11Party", "caption": "Party" },
 
 	  	{ "type": "Label", "label":  "Heizzone 12" },
-		{ "type": "CheckBox", "name": "ShowHeatArea11", "caption": "Heizzone" },
-		{ "type": "CheckBox", "name": "ShowHeatCtrl11", "caption": "Heizkreis" },
-		{ "type": "CheckBox", "name": "ShowIODevice11", "caption": "I/O Device" },
-		{ "type": "CheckBox", "name": "ShowHeatArea11Motor", "caption": "Lüftermotor" },
-		{ "type": "CheckBox", "name": "ShowHeatArea11Cooling", "caption": "Kühlen" },
-		{ "type": "CheckBox", "name": "ShowHeatArea11FloorTemp", "caption": "Boden Temperatur" },
-		{ "type": "CheckBox", "name": "ShowHeatArea11System", "caption": "Heizsystem" },
-		{ "type": "CheckBox", "name": "ShowHeatArea11Program", "caption": "Programm" },
-		{ "type": "CheckBox", "name": "ShowHeatArea11Party", "caption": "Party" }
+		{ "type": "CheckBox", "name": "ShowHeatArea12", "caption": "Heizzone" },
+		{ "type": "CheckBox", "name": "ShowHeatCtrl12", "caption": "Heizkreis" },
+		{ "type": "CheckBox", "name": "ShowIODevice12", "caption": "I/O Device" },
+		{ "type": "CheckBox", "name": "ShowHeatArea12Motor", "caption": "Lüftermotor" },
+		{ "type": "CheckBox", "name": "ShowHeatArea12Cooling", "caption": "Kühlen" },
+		{ "type": "CheckBox", "name": "ShowHeatArea12FloorTemp", "caption": "Boden Temperatur" },
+		{ "type": "CheckBox", "name": "ShowHeatArea12System", "caption": "Heizsystem" },
+		{ "type": "CheckBox", "name": "ShowHeatArea12Program", "caption": "Programm" },
+		{ "type": "CheckBox", "name": "ShowHeatArea12Party", "caption": "Party" }
   ],
   "actions":
   [
