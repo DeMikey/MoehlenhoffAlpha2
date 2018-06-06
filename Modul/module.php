@@ -205,103 +205,114 @@ class MoehlenhoffAlpha2 extends IPSModule
         $this->RegisterPropertyBoolean("ShowHeatArea01Party", false);
 
 		$this->RegisterPropertyBoolean("ShowHeatArea02", false);
+        $this->RegisterPropertyBoolean("ShowHeatCtrl02", false);
+        $this->RegisterPropertyBoolean("ShowIODevice02", false);
         $this->RegisterPropertyBoolean("ShowHeatArea02Motor", false);
         $this->RegisterPropertyBoolean("ShowHeatArea02Cooling", false);
         $this->RegisterPropertyBoolean("ShowHeatArea02FloorTemp", false);
         $this->RegisterPropertyBoolean("ShowHeatArea02System", false);
         $this->RegisterPropertyBoolean("ShowHeatArea02Program", false);
         $this->RegisterPropertyBoolean("ShowHeatArea02Party", false);
-        $this->RegisterPropertyBoolean("ShowHeatCtrl02", false);
 
 		$this->RegisterPropertyBoolean("ShowHeatArea03", false);
+        $this->RegisterPropertyBoolean("ShowHeatCtrl03", false);
+        $this->RegisterPropertyBoolean("ShowIODevice03", false);
         $this->RegisterPropertyBoolean("ShowHeatArea03Motor", false);
         $this->RegisterPropertyBoolean("ShowHeatArea03Cooling", false);
         $this->RegisterPropertyBoolean("ShowHeatArea03FloorTemp", false);
         $this->RegisterPropertyBoolean("ShowHeatArea03System", false);
         $this->RegisterPropertyBoolean("ShowHeatArea03Program", false);
         $this->RegisterPropertyBoolean("ShowHeatArea03Party", false);
-        $this->RegisterPropertyBoolean("ShowHeatCtrl03", false);
 
 		$this->RegisterPropertyBoolean("ShowHeatArea04", false);
+        $this->RegisterPropertyBoolean("ShowHeatCtrl04", false);
+        $this->RegisterPropertyBoolean("ShowIODevice04", false);
         $this->RegisterPropertyBoolean("ShowHeatArea04Motor", false);
         $this->RegisterPropertyBoolean("ShowHeatArea04Cooling", false);
         $this->RegisterPropertyBoolean("ShowHeatArea04FloorTemp", false);
         $this->RegisterPropertyBoolean("ShowHeatArea04System", false);
         $this->RegisterPropertyBoolean("ShowHeatArea04Program", false);
         $this->RegisterPropertyBoolean("ShowHeatArea04Party", false);
-        $this->RegisterPropertyBoolean("ShowHeatCtrl04", false);
 
 		$this->RegisterPropertyBoolean("ShowHeatArea05", false);
+        $this->RegisterPropertyBoolean("ShowHeatCtrl05", false);
+        $this->RegisterPropertyBoolean("ShowIODevice05", false);
         $this->RegisterPropertyBoolean("ShowHeatArea05Motor", false);
         $this->RegisterPropertyBoolean("ShowHeatArea05Cooling", false);
         $this->RegisterPropertyBoolean("ShowHeatArea05FloorTemp", false);
         $this->RegisterPropertyBoolean("ShowHeatArea05System", false);
         $this->RegisterPropertyBoolean("ShowHeatArea05Program", false);
         $this->RegisterPropertyBoolean("ShowHeatArea05Party", false);
-        $this->RegisterPropertyBoolean("ShowHeatCtrl05", false);
 
 		$this->RegisterPropertyBoolean("ShowHeatArea06", false);
+        $this->RegisterPropertyBoolean("ShowHeatCtrl06", false);
+        $this->RegisterPropertyBoolean("ShowIODevice06", false);
         $this->RegisterPropertyBoolean("ShowHeatArea06Motor", false);
         $this->RegisterPropertyBoolean("ShowHeatArea06Cooling", false);
         $this->RegisterPropertyBoolean("ShowHeatArea06FloorTemp", false);
         $this->RegisterPropertyBoolean("ShowHeatArea06System", false);
         $this->RegisterPropertyBoolean("ShowHeatArea06Program", false);
         $this->RegisterPropertyBoolean("ShowHeatArea06Party", false);
-        $this->RegisterPropertyBoolean("ShowHeatCtrl06", false);
 
 		$this->RegisterPropertyBoolean("ShowHeatArea07", false);
+        $this->RegisterPropertyBoolean("ShowHeatCtrl07", false);
+        $this->RegisterPropertyBoolean("ShowIODevice07", false);
         $this->RegisterPropertyBoolean("ShowHeatArea07Motor", false);
         $this->RegisterPropertyBoolean("ShowHeatArea07Cooling", false);
         $this->RegisterPropertyBoolean("ShowHeatArea07FloorTemp", false);
         $this->RegisterPropertyBoolean("ShowHeatArea07System", false);
         $this->RegisterPropertyBoolean("ShowHeatArea07Program", false);
         $this->RegisterPropertyBoolean("ShowHeatArea07Party", false);
-        $this->RegisterPropertyBoolean("ShowHeatCtrl07", false);
 
 		$this->RegisterPropertyBoolean("ShowHeatArea08", false);
+        $this->RegisterPropertyBoolean("ShowHeatCtrl08", false);
+        $this->RegisterPropertyBoolean("ShowIODevice08", false);
         $this->RegisterPropertyBoolean("ShowHeatArea08Motor", false);
         $this->RegisterPropertyBoolean("ShowHeatArea08Cooling", false);
         $this->RegisterPropertyBoolean("ShowHeatArea08FloorTemp", false);
         $this->RegisterPropertyBoolean("ShowHeatArea08System", false);
         $this->RegisterPropertyBoolean("ShowHeatArea08Program", false);
         $this->RegisterPropertyBoolean("ShowHeatArea08Party", false);
-        $this->RegisterPropertyBoolean("ShowHeatCtrl08", false);
 
 		$this->RegisterPropertyBoolean("ShowHeatArea09", false);
+        $this->RegisterPropertyBoolean("ShowHeatCtrl09", false);
+        $this->RegisterPropertyBoolean("ShowIODevice09", false);
         $this->RegisterPropertyBoolean("ShowHeatArea09Motor", false);
         $this->RegisterPropertyBoolean("ShowHeatArea09Cooling", false);
         $this->RegisterPropertyBoolean("ShowHeatArea09FloorTemp", false);
         $this->RegisterPropertyBoolean("ShowHeatArea09System", false);
         $this->RegisterPropertyBoolean("ShowHeatArea09Program", false);
         $this->RegisterPropertyBoolean("ShowHeatArea09Party", false);
-        $this->RegisterPropertyBoolean("ShowHeatCtrl09", false);
 
 		$this->RegisterPropertyBoolean("ShowHeatArea10", false);
+        $this->RegisterPropertyBoolean("ShowHeatCtrl10", false);
+        $this->RegisterPropertyBoolean("ShowIODevice10", false);
         $this->RegisterPropertyBoolean("ShowHeatArea10Motor", false);
         $this->RegisterPropertyBoolean("ShowHeatArea10Cooling", false);
         $this->RegisterPropertyBoolean("ShowHeatArea10FloorTemp", false);
         $this->RegisterPropertyBoolean("ShowHeatArea10System", false);
         $this->RegisterPropertyBoolean("ShowHeatArea10Program", false);
         $this->RegisterPropertyBoolean("ShowHeatArea10Party", false);
-        $this->RegisterPropertyBoolean("ShowHeatCtrl10", false);
 
 		$this->RegisterPropertyBoolean("ShowHeatArea11", false);
+        $this->RegisterPropertyBoolean("ShowHeatCtrl11", false);
+        $this->RegisterPropertyBoolean("ShowIODevice11", false);
         $this->RegisterPropertyBoolean("ShowHeatArea11Motor", false);
         $this->RegisterPropertyBoolean("ShowHeatArea11Cooling", false);
         $this->RegisterPropertyBoolean("ShowHeatArea11FloorTemp", false);
         $this->RegisterPropertyBoolean("ShowHeatArea11System", false);
         $this->RegisterPropertyBoolean("ShowHeatArea11Program", false);
         $this->RegisterPropertyBoolean("ShowHeatArea11Party", false);
-        $this->RegisterPropertyBoolean("ShowHeatCtrl11", false);
 
 		$this->RegisterPropertyBoolean("ShowHeatArea12", false);
+        $this->RegisterPropertyBoolean("ShowHeatCtrl12", false);
+        $this->RegisterPropertyBoolean("ShowIODevice12", false);
         $this->RegisterPropertyBoolean("ShowHeatArea12Motor", false);
         $this->RegisterPropertyBoolean("ShowHeatArea12Cooling", false);
         $this->RegisterPropertyBoolean("ShowHeatArea12FloorTemp", false);
         $this->RegisterPropertyBoolean("ShowHeatArea12System", false);
         $this->RegisterPropertyBoolean("ShowHeatArea12Program", false);
         $this->RegisterPropertyBoolean("ShowHeatArea12Party", false);
-        $this->RegisterPropertyBoolean("ShowHeatCtrl12", false);
 
 		//Timer
 		$this->RegisterTimer("UpdateTimer", 0, 'MAlpha2_RequestStatus($_IPS[\'TARGET\']);');
@@ -689,6 +700,12 @@ class MoehlenhoffAlpha2 extends IPSModule
                 }
             }
             $this->SendDebug("IO Device ", (integer) $xml->Device->IODEVICE->count(), 0);
+		    for ($i=1; $i <= (integer) $xml->Device->IODEVICE->count(); $i++)
+            {
+                $HeatArea = (integer)$xml->Device->xpath('IODEVICE[@nr=\'' . $i . '\']/HEATAREA_NR')[0];
+                $this->MaintainArray( self::$valuesIODevice, $i, $HeatArea );
+                $this->SetValuesArray( self::$valuesIODevice, $xml, $i );
+            }
 		}
 		else
 		{
