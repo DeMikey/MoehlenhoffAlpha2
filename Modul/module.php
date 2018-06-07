@@ -696,7 +696,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		        {
                     $this->SendDebug("HEATCTRL " . $i, "HeatArea: " . $HeatArea, 0);
                     $this->MaintainArray( self::$valuesHeatCtrlExt, $i, $HeatArea );
-                    $this->SetValuesArray( self::$valuesHeatCtrlExt, $xml, $i );
+                    $this->SetValuesArray( self::$valuesHeatCtrlExt, $xml, $i, $HeatArea );
                 }
             }
             $this->SendDebug("IO Device ", (integer) $xml->Device->IODEVICE->count(), 0);
@@ -704,7 +704,7 @@ class MoehlenhoffAlpha2 extends IPSModule
             {
                 $HeatArea = (integer)$xml->Device->xpath('IODEVICE[@nr=\'' . $i . '\']/HEATAREA_NR')[0];
                 $this->MaintainArray( self::$valuesIODevice, $i, $HeatArea );
-                $this->SetValuesArray( self::$valuesIODevice, $xml, $i );
+                $this->SetValuesArray( self::$valuesIODevice, $xml, $i, $HeatArea );
             }
 		}
 		else
@@ -713,9 +713,9 @@ class MoehlenhoffAlpha2 extends IPSModule
             {
                 $this->SendDebug("HEATCTRL " . $i, "Is in use: " . (string)$xml->Device->xpath( 'HEATCTRL[@nr=\'' . $i . '\']/INUSE' )[0], 0 );
                 $HeatArea = (integer)$xml->Device->xpath('HEATCTRL[@nr=\'' . $i . '\']/HEATAREA_NR')[0];
-                $this->SendDebug("HEATCTRL " . $i, "HeatArea: " . $HeatArea, 0);
-                if ((boolean)$xml->Device->xpath( 'HEATCTRL[@nr=\'' . $i . '\']/INUSE' )[0])
+                if ((integer)$xml->Device->xpath( 'HEATCTRL[@nr=\'' . $i . '\']/INUSE' )[0] == 1)
                 {
+                    $this->SendDebug("HEATCTRL " . $i, "HeatArea: " . $HeatArea, 0);
                     $this->MaintainArray( self::$valuesHeatCtrl, $i, $HeatArea );
                     $this->SetValuesArray( self::$valuesHeatCtrl, $xml, $i );
                 }
@@ -753,7 +753,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		}
 	}
 
-	private function SetValuesArray($Array, $Xml, $HeatNr = null)
+	private function SetValuesArray($Array, $Xml, $HeatNr = null, $HeatArea = null)
     {
 		foreach($Array as $key => $value)
 		{
@@ -763,7 +763,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 			}
 			else
 			{
-				$keep = $this->ReadPropertyBoolean(sprintf($value['Keep'], $HeatNr));
+				$keep = $this->ReadPropertyBoolean(sprintf($value['Keep'], $HeatArea));
 			}
 			
 			if ($keep && (sizeof($Xml->Device->xpath(sprintf($key, $HeatNr))) != 0))
