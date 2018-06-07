@@ -683,7 +683,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		$this->SetValuesArray(self::$base, $xml);
 		for ($i=1; $i <= 12; $i++)
 		{
-            $this->SetValuesArray( self::$values, $xml, $i );
+            $this->SetValuesArray( self::$values, $xml, $i);
         }
 		
 		if (GetValue($this->GetIDForIdent($this->ReduceToIdent("VERS_SW_STM"))) >= "02.02")
@@ -753,7 +753,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		}
 	}
 
-	private function SetValuesArray($Array, $Xml, $HeatNr = null, $HeatArea = null)
+	private function SetValuesArray($Array, $Xml, $HeatNr, $HeatArea)
     {
 		foreach($Array as $key => $value)
 		{
