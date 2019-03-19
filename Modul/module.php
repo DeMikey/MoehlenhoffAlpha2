@@ -618,7 +618,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 			$Command->addChild($KeySplit[1], $Value);
 		}
 
-		//IPS_LogMessage("Alpha2", $xml->asXML());
+		IPS_LogMessage("Alpha2", $xml->asXML());
 
         // Wurden die Änderung erfolgreich an die Basis gesendet wird der Wert in IP Symcon aktuallisiert
 		if ($this->sendChanges($xml))
