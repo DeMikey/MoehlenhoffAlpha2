@@ -778,7 +778,7 @@ class MoehlenhoffAlpha2 extends IPSModule
     {
         $ReplacIdent = str_replace(Array("[@nr='", "']", "/"), Array("", "", "_"), $ID);
         $ReplacIdent = str_replace(Array("[@shiftingtime='", "']", "/"), Array("", "", "_"), $ReplacIdent);
-	IPS_LogMessage("Alpha2", $ReplacIdent);
+//	IPS_LogMessage("Alpha2", $ReplacIdent);
         return $ReplacIdent;
 //		return str_replace(Array("[@nr='", "']", "/"), Array("", "", "_"), $ID);
 	}
@@ -802,8 +802,9 @@ class MoehlenhoffAlpha2 extends IPSModule
 	}
 
 	private function GetTypeForIdent($Ident) {
-		IPS_LogMessage("Alpha2", $Ident);
+		IPS_LogMessage("Alpha2_Ident", $Ident);
 		foreach(self::$values as $key => $value) {
+			IPS_LogMessage("Alpha2_Key", self::ReduceToIdent($key));
 			if(self::ReduceToIdent($key) == $Ident) {
 				return $value["Type"];
 			}
