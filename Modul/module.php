@@ -802,7 +802,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 	}
 
 	private function GetTypeForIdent($Ident) {
-		
+		IPS_LogMessage("Alpha2", $Ident);
 		foreach(self::$values as $key => $value) {
 			if(self::ReduceToIdent($key) == $Ident) {
 				return $value["Type"];
