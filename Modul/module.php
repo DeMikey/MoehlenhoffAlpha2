@@ -778,6 +778,7 @@ class MoehlenhoffAlpha2 extends IPSModule
     {
         $ReplacIdent = str_replace(Array("[@nr='", "']", "/"), Array("", "", "_"), $ID);
         $ReplacIdent = str_replace(Array("[@shiftingtime='", "']", "/"), Array("", "", "_"), $ReplacIdent);
+	IPS_LogMessage("Alpha2", $ReplacIdent);
         return $ReplacIdent;
 //		return str_replace(Array("[@nr='", "']", "/"), Array("", "", "_"), $ID);
 	}
