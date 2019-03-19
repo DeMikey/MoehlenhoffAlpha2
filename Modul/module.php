@@ -805,7 +805,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		IPS_LogMessage("Alpha2_Ident", $Ident);
 		foreach(self::$values as $key => $value) {
 			IPS_LogMessage("Alpha2_Key", self::ReduceToIdent($key));
-			if(self::ReduceToIdent($key) == $Ident) {
+			if(self::ReduceToIdent($key) == preg_replace('/\d+/', '%d', $Ident)) {
 				return $value["Type"];
 			}
 		}
