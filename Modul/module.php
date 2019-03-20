@@ -789,11 +789,9 @@ class MoehlenhoffAlpha2 extends IPSModule
 		foreach(self::$values as $key => $value) {
 			if(self::ReduceToIdent($key) == preg_replace('/\d+/', '%d', $Ident)) {
 				if(strpos($key, "%d")) {
-					IPS_LogMessage("Alpha2_Response", $key);
 					preg_match_all('!\d+!', $Ident, $matches);
-   					$temp = str_replace('%d_', '"nr=' . implode(' ', $matches[0]) . '"/', $key);
 					IPS_LogMessage("Alpha2_Response", sprintf($temp, implode(' ', $matches[0])));
-					return $temp;
+					return sprintf($temp, implode(' ', $matches[0]));
 				}
 				IPS_LogMessage("Alpha2_Response orginal", $key);
 				return $key;
