@@ -797,7 +797,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		}
 		
 		foreach(self::$valuesHeatCtrlExt as $key => $value) {
-			if(self::ReduceToIdent($key) == $Ident) {
+			if(self::ReduceToIdent($key) == preg_replace('/\d+/', '%d', $Ident)) {
 				return $key;
 			}
 		}
@@ -815,7 +815,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		}
 		
 		foreach(self::$valuesHeatCtrlExt as $key => $value) {
-			if(self::ReduceToIdent($key) == $Ident) {
+			if(self::ReduceToIdent($key) == preg_replace('/\d+/', '%d', $Ident)) {
 				return $value["Type"];
 			}
 		}
