@@ -788,9 +788,11 @@ class MoehlenhoffAlpha2 extends IPSModule
 		
 		foreach(self::$values as $key => $value) {
 			if(self::ReduceToIdent($key) == preg_replace('/\d+/', '%d', $Ident)) {
-				preg_match_all('!\d+!', $Ident, $matches);
-   				return str_replace('%d_', '"nr=' + implode(' ', $matches[0]) + '"/', $key);
-				//return $key;
+				if(strpos($Key, "%d")) {
+					preg_match_all('!\d+!', $Ident, $matches);
+   					return str_replace('%d_', '"nr=' + implode(' ', $matches[0]) + '"/', $key);
+				}
+				return $key;
 			}
 		}
 		
