@@ -789,7 +789,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 		foreach(self::$values as $key => $value) {
 			if(self::ReduceToIdent($key) == preg_replace('/\d+/', '%d', $Ident)) {
 				if(strpos($key, "%d")) {
-					PS_LogMessage("Alpha2_Response", $key);
+					IPS_LogMessage("Alpha2_Response", $key);
 					preg_match_all('!\d+!', $Ident, $matches);
    					$temp = str_replace('%d_', '"nr=' . implode(' ', $matches[0]) . '"/', $key);
 					IPS_LogMessage("Alpha2_Response", $temp);
