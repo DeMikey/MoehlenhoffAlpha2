@@ -599,6 +599,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 			$Value = str_replace(",", ".", $Value);
 		
 		$Key = self::GetKeyForIdent($Ident);
+	    	IPS_LogMessage("Alpha2", $Key);
 		if(strpos($Key, "/") === false) {
 			$Device->addChild($Key, $Value);
 		} else {
@@ -786,8 +787,10 @@ class MoehlenhoffAlpha2 extends IPSModule
 	private function GetKeyForIdent($Ident) {
 		
 		foreach(self::$values as $key => $value) {
-			if(self::ReduceToIdent($key) == $Ident) {
-				return $key;
+			if(self::ReduceToIdent($key) == preg_replace('/\d+/', '%d', $Ident)) {
+				preg_match_all('!\d+!', $Ident, $matches);
+   				return str_replace('%d_' '"nr=' + implode(' ', $matches[0]) + '"/', $key);
+				//return $key;
 			}
 		}
 		
