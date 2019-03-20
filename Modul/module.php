@@ -792,7 +792,7 @@ class MoehlenhoffAlpha2 extends IPSModule
 					IPS_LogMessage("Alpha2_Response", $key);
 					preg_match_all('!\d+!', $Ident, $matches);
    					$temp = str_replace('%d_', '"nr=' . implode(' ', $matches[0]) . '"/', $key);
-					IPS_LogMessage("Alpha2_Response", $temp);
+					IPS_LogMessage("Alpha2_Response", sprintf($temp, implode(' ', $matches[0])));
 					return $temp;
 				}
 				IPS_LogMessage("Alpha2_Response orginal", $key);
