@@ -798,6 +798,10 @@ class MoehlenhoffAlpha2 extends IPSModule
 		
 		foreach(self::$valuesHeatCtrlExt as $key => $value) {
 			if(self::ReduceToIdent($key) == preg_replace('/\d+/', '%d', $Ident)) {
+				if(strpos($key, "%d")) {
+					preg_match_all('!\d+!', $Ident, $matches);
+					return sprintf($key, implode(' ', $matches[0]));
+				}
 				return $key;
 			}
 		}
