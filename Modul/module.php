@@ -790,10 +790,8 @@ class MoehlenhoffAlpha2 extends IPSModule
 			if(self::ReduceToIdent($key) == preg_replace('/\d+/', '%d', $Ident)) {
 				if(strpos($key, "%d")) {
 					preg_match_all('!\d+!', $Ident, $matches);
-					IPS_LogMessage("Alpha2_Response", sprintf($key, implode(' ', $matches[0])));
 					return sprintf($key, implode(' ', $matches[0]));
 				}
-				IPS_LogMessage("Alpha2_Response orginal", $key);
 				return $key;
 			}
 		}
@@ -811,7 +809,6 @@ class MoehlenhoffAlpha2 extends IPSModule
 	private function GetTypeForIdent($Ident) {
 		IPS_LogMessage("Alpha2_Ident", $Ident);
 		foreach(self::$values as $key => $value) {
-			IPS_LogMessage("Alpha2_Key", self::ReduceToIdent($key));
 			if(self::ReduceToIdent($key) == preg_replace('/\d+/', '%d', $Ident)) {
 				return $value["Type"];
 			}
